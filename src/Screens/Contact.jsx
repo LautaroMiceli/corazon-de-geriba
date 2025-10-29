@@ -17,12 +17,8 @@ export default function FooterContact() {
 
   const dataFollowUs = [
     {
-      href: "https://www.instagram.com/",
+      href: "https://www.instagram.com/corazondegeriba/",
       component: <FaInstagram />
-    },
-    {
-      href: "https://www.facebook.com/",
-      component: <FaFacebook />
     },
     {
       href: "https://wa.me/5522999999999",

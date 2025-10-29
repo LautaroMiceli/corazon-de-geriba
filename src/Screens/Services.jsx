@@ -1,13 +1,14 @@
 import React from 'react'
 import { Galleria } from 'primereact/galleria';
 import { breakfastImages, bedroomImages, responsiveOptions } from '../utils/galleryImages';
+import { Link } from 'react-router-dom';
 
 
 const Services = () => {
   return (
     <>
       <section id='services' className="w-full p-10 pt-20 flex flex-col  items-center bg-linear-to-b from-[#a4a3a2b9] via-white via-4% to-[#F9F6F1] ">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 border-b-4 border-yellow-500 pb-2">
+        <h2 className="text-3xl md:text-4xl w-full text-center font-bold text-gray-800 mb-6 border-b-4 border-yellow-500 pb-2">
           Nuestros servicios
         </h2>
 
@@ -82,6 +83,22 @@ function BedroomGallery() {
           <p className="text-gray-700 text-base leading-relaxed">
             Nuestras habitaciones combinan confort y estilo tropical, con vistas al mar, camas confortables y decoración acogedora. Cada espacio está pensado para que tu estadía sea relajante y memorable.
           </p>
+          <Link
+            to={"/accommodations"}
+            className={`
+        px-8 py-4
+        bg-blue-500 hover:bg-blue-600
+        text-white font-bold
+        rounded-full
+        shadow-lg
+        transition-all duration-300
+        hover:scale-105
+        cursor-pointer
+        text-center
+        "`}
+          >
+            Ver habitaciones
+          </Link>
         </div>
 
         {/* Galería */}

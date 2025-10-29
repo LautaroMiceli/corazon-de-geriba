@@ -1,10 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { useAnimation } from '../context/AnimationContext';
+import { useLocation } from 'react-router-dom';
 
 const BookNowFloat = () => {
+    const location = useLocation()
+
     const {animationsDone} = useAnimation()
-    console.log(animationsDone)
+    if (location.pathname.startsWith('/booking')) return <></>
     return (
         <Link
             to={"/booking"}

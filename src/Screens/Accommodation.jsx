@@ -1,27 +1,13 @@
-import React from "react";
-// Si usás PrimeReact -> asegúrate de tener primereact instalado y estilos importados en tu proyecto
+import React, { useEffect } from "react";
 import { Galleria } from "primereact/galleria";
 import { bedroomImages } from "../utils/galleryImages";
 import { Link } from "react-router-dom";
 
-
-/**
- * RoomDetailsScreen + BedroomGallery integrado
- *
- * Props:
- * - url (string) optional: enlace externo para "Consultar disponibilidad".
- * - loading (boolean) optional: si true, el CTA queda deshabilitado.
- *
- * Reemplazá `bedroomImages` y `responsiveOptions` con tus datos reales.
- */
-
 const BedroomGallery = ({ children, flex_row_reverse }) => {
-    // --- REEMPLAZAR con tus imágenes reales ---
-    // Cada item debe tener: itemImageSrc, thumbnailImageSrc, alt
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
-    // --- FIN: reemplazar ---
-
-    // Opciones responsive de ejemplo para Galleria (ajustá según necesidad)
     const responsiveOptions = [
         {
             breakpoint: "1024px",
@@ -57,7 +43,7 @@ const BedroomGallery = ({ children, flex_row_reverse }) => {
     };
 
     return (
-        <section className="custom max-h-screen w-full p-8 flex flex-col gap-10 items-center bg-linear-to-b from-yellow-50 via-white to-yellow-50">
+        <section className="custom w-full p-8 flex flex-col gap-10 items-center bg-linear-to-b from-yellow-50 via-white to-yellow-50">
             <div className={`flex items-center gap-10 lg:gap-20 w-full max-w-6xl ${flex_row_reverse ? "flex-row-reverse" : "flex-row"}`}>
                 {/* Texto descriptivo */}
                 {children}
