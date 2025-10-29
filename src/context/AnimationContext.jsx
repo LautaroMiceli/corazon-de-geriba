@@ -5,18 +5,13 @@ const AnimationContext = createContext();
 
 const AnimationProvider = ({ children }) => {
     const location = useLocation()
-    const [animationsDone, setAnimationsDone] = useState(location.pathname !== '/');
-    const actualPath = sessionStorage.getItem('actualPath')
-    if(!actualPath){
-        sessionStorage.setItem('actualPath', location.pathname)
-    }
+    const [animationsDone, setAnimationsDone] = useState(false);
+
     useEffect(() => {
-        if (location.pathname !== actualPath) {
-            setAnimationsDone(true);
-        }
-    })
+        if(location.pathname !== "/") setAnimationsDone(true)
+    },[location.pathname])
     return (
-        <AnimationContext.Provider value={{ animationsDone }}>
+        <AnimationContext.Provider value={{ animationsDone, setAnimationsDone }}>
             {children}
         </AnimationContext.Provider>
     );

@@ -9,14 +9,14 @@ html,
 body,
 #root {
   cursor: url("/cursor.png") 4 6, auto;
-  height: 100%;
+  height: 100dvh;
   width: 100%;
 }
 
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 
@@ -97,30 +97,14 @@ body,
 }
 
 
-@keyframes revealAndMove {
-  from {
-    opacity: 0;
-    translate: 0 200px;
-    scale: 0.7;
-  }
 
-  to {
-    opacity: 1;
-    translate: 0 0px;
-    scale: 1;
-  }
-}
 
-.custom {
-  animation: revealAndMove linear both;
-  animation-timeline: view();
-  animation-range: entry 5% cover 20%;
-}
+
 
 
 .booking_image {
   background-image: url("/booking_image.jpg");
-  background-position: 0px -400px;
+  background-position: 0px -435px;
   background-repeat: no-repeat;
 }
 
@@ -190,9 +174,9 @@ body,
 
 .group {
   display: flex;
-  gap: 1em;
+  gap: 20px;
   animation: translate_x 50s infinite linear;
-  padding-right: 10px;
+  padding-left: 0px;
 }
 
 .carrousel::-webkit-scrollbar {
@@ -212,11 +196,21 @@ body,
 .reveal_delay_2s {
   animation: fadeIn .5s ease-in forwards;
   animation-delay: .5s;
-  opacity: 0;
 }
 
 
+@media screen and (height <= 700px) {
+  .booking_image{
+    background-position: 1000px -100px;
+    background-color: red;
+  }
+}
 
+@media screen and (width <= 600px) {
+  .booking_image{
+    background-position: -1400px -200px;
+  }
+}
 
 
 
@@ -268,4 +262,14 @@ body,
 ::-webkit-scrollbar-thumb:hover {
   background-color: #555;
   /* color del thumb al hover */
+}
+
+@media (pointer: coarse) {
+  html, body {
+    cursor: url('/favicon-final.png'), auto !important;
+  }
+
+  *:hover {
+    cursor: url('/favicon-final.png'), auto !important;
+  }
 }

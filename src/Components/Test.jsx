@@ -1,113 +1,121 @@
+import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+import { useAnimation } from "../context/AnimationContext";
+import { useLocation } from "react-router-dom";
 
-import React from 'react'
-import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
+export default function Test() {
+    const [hidden, setHidden] = useState(false);
+    const [mobileOpen, setMobileOpen] = useState(false);
+    const { animationsDone } = useAnimation();
+    const location = useLocation();
 
-const reviews = [
-    {
-        name: "Eduardo",
-        text: "Os anfitrões são excelentes e deram toda atenção e suporte. O café da manhã é muito bom!",
-        from: "Brasil",
-        score: 9,
-    },
-    {
-        name: "Leli",
-        text: "Muy buen lugar, ambiente cálido y familiar. El desayuno era muy abundante. Los anfitriones siempre atentos.",
-        from: "Argentina",
-        score: 10,
-    },
-    {
-        name: "Daniel",
-        text: "Todo estuvo perfecto, desde los anfitriones muy atentos y preocupados por la comodidad de los huéspedes, hasta la limpieza del lugar, muy bonito la implementación y el buen aire acondicionado junto con un rico desayuno se agradece muchísimo.",
-        from: "Chile",
-        score: 10,
-    },
-    {
-        name: "Patrícia",
-        text: "Do atendimento, super atenciosos, café da manhã delicioso, próximo da praia 2 minutos..quarto espaçoso. Foi ótimo e indico ..",
-        from: "Brasil",
-        score: 10,
-    },
-    {
-        name: "Armand",
-        text: "Gostamos muito! Uma família muito atenciosa e o café da manhã ótimo!",
-        from: "Brasil",
-        score: 9,
-    },
-    {
-        name: "Victor",
-        text: "La verdad una experiencia unica. Hasta el momento los mejores anfitriones que tuve. Muchisima disposicion de su parte. El desayuno tambien espectacular. Sinceramente 100% recomendable. Volveria con todo gusto",
-        from: "Chile",
-        score: 10,
-    },
-    {
-        name: "Raimundo",
-        text: "FUI BEM RECEBIDO",
-        from: "Brasil",
-        score: 9,
-    },
-];
+    useEffect(() => {
+        let lastScrollY = window.scrollY;
 
-export function Test() {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > lastScrollY && currentScrollY > 80) {
+                setHidden(true);
+            } else {
+                setHidden(false);
+            }
+
+            lastScrollY = currentScrollY;
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    const nav_buttons = [
+        { to: "/", text: "Inicio" },
+        { to: "/services", text: "Servicios" },
+        { to: "/accommodations", text: "Habitaciones" },
+        { to: "/contact", text: "Contacto" },
+        { to: "/booking", text: "Reservas" },
+    ];
+
+    // header classes: mantenemos todas tus clases, agregamos control de translate y opacity
+    const headerClass =
+        (location.pathname !== "/" && animationsDone ? "opacity-100 " : "opacity-0 ") +
+        (hidden ? "-translate-y-full " : "translate-y-0 ") +
+        "fixed top-0 left-0 w-screen z-50 backdrop-blur-sm bg-white/50 shadow-md reveal_delay_2s transition-transform duration-300";
+
     return (
-        <section className="w-full bg-yellow-50 py-12 px-4 md:px-20 l">
-            <h2 className="text-3xl font-semibold text-center text-yellow-800 mb-8">
-                Opiniones de nuestros huéspedes
-            </h2>
-            <div className='carrousel'>
-                <ReviewMap />
-                <ReviewMap />
-                <InnerShadow />
+        <header id="header_main" className={headerClass}>
+            <div className="max-w-7xl mx-auto flex justify-between items-center h-16 px-6">
+                <div className="flex items-center gap-4">
+                    <img src="/favicon-final.png" width={60} alt="logo" />
+                </div>
+
+                {/* --- BOTÓN HAMBURGUESA (visible en mobile, oculto en desktop) --- */}
+                <button
+                    type="button"
+                    aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
+                    aria-expanded={mobileOpen}
+                    onClick={() => setMobileOpen((s) => !s)}
+                    className="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-300"
+                >
+                    {/* simple SVG: cambia entre hamburguesa y cruz */}
+                    {mobileOpen ? (
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    ) : (
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    )}
+                </button>
+
+                {/* --- NAV Desktop (hidden on mobile) --- */}
+                <div className="hidden md:flex">
+                    <NavButtonsList nav_buttons={nav_buttons} onNavigate={() => { }} />
+                </div>
             </div>
-        </section>
+
+            {/* --- PANEL MOBILE (se despliega bajo el header) ---
+          mantenemos estilos visuales similares (bg, blur, shadow) */}
+            <div
+                className={
+                    "md:hidden transition-max-h duration-300 overflow-hidden " +
+                    (mobileOpen ? "max-h-screen" : "max-h-0")
+                }
+                aria-hidden={!mobileOpen}
+            >
+                <div className="px-6 pb-6">
+                    <NavButtonsList
+                        nav_buttons={nav_buttons}
+                        vertical
+                        onNavigate={() => setMobileOpen(false)} // cierra el menú al navegar
+                    />
+                </div>
+            </div>
+        </header>
     );
 }
 
+const NavButtonsList = ({ nav_buttons, vertical = false, onNavigate = () => { } }) => {
+    // vertical -> mobile panel (stack), default -> inline row
+    const baseClass = vertical ? "flex flex-col gap-4 text-gray-800 font-medium" : "flex gap-6 text-gray-800 font-medium";
 
-const ReviewMap = () => {
     return (
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-5 group">
-            {reviews.map((review, index) => {
-                const starsDecimal = review.score / 2; // 0 a 5
-                const fullStars = Math.floor(starsDecimal);
-                const hasHalfStar = starsDecimal - fullStars >= 0.5;
-                const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
-                return (
-                    <div
-                        key={index}
-                        className="bg-white p-6 rounded-lg shadow-md h-70 flex flex-col gap-2 w-80"
-                    >
-                        <div>
-                            <h3 className="font-semibold text-lg">{review.name}</h3>
-                            <span className="text-sm text-gray-500">{review.from}</span>
-                        </div>
-                        <div className="flex items-center">
-                            {/* Estrellas llenas */}
-                            {Array.from({ length: fullStars }).map((_, i) => (
-                                <FaStar key={`full-${i}`} className="h-4 w-4 text-yellow-500" />
-                            ))}
-                            {/* Media estrella */}
-                            {hasHalfStar && <FaStarHalfAlt className="h-4 w-4 text-yellow-500" />}
-                            {/* Estrellas vacías */}
-                            {Array.from({ length: emptyStars }).map((_, i) => (
-                                <FaRegStar key={`empty-${i}`} className="h-4 w-4 text-gray-300" />
-                            ))}
-                        </div>
-                        <p className="text-gray-700 text-sm">{review.text}</p>
-                    </div>
-                );
-            })}
-        </div >
-    )
-}
-
-export default Test
-
-
-const InnerShadow = () => {
-    return (
-        <>
-            <div class="pointer-events-none absolute top-0 left-0 h-full w-5 bg-linear-to-r from-black/20 to-transparent"></div>
-            <div class="pointer-events-none absolute top-0 right-0 h-full w-5 bg-linear-to-l from-black/20 to-transparent"></div>
-        </>
-    )
-}
+        <nav className={baseClass}>
+            {nav_buttons.map((e, i) => (
+                <NavLink
+                    key={i}
+                    to={e.to}
+                    onClick={() => onNavigate()}
+                    className={({ isActive }) =>
+                        isActive
+                            ? "text-yellow-800 text-underline"
+                            : "hover:text-yellow-900 transition-colors text-underline"
+                    }
+                >
+                    {e.text}
+                </NavLink>
+            ))}
+        </nav>
+    );
+};

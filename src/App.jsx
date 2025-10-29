@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className='flex flex-col flex-1'>
+      <main className='flex flex-col flex-1 bg-yellow-50'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/booking' element={<Booking />} />
