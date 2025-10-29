@@ -1,0 +1,36 @@
+import { useState } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Home from './Screens/Home'
+import Test from './Components/Test'
+import Services from './Screens/Services'
+import AboutUs from './Screens/AboutUs'
+import BookNowFloat from './Components/BookNowFloat'
+import Booking from './Components/Booking'
+import Contact from './Screens/Contact'
+import Header from './Components/HeaderLayout'
+import Accommodation from './Screens/Accommodation'
+
+
+
+function App() {
+
+
+  return (
+    <>
+      <Header />
+      <main className='flex flex-col flex-1'>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/booking' element={<Booking />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/services' element={<Services />} />
+          <Route path='/test' element={<Test />} />
+          <Route path='/accommodations' element={<Accommodation />} />
+        </Routes>
+        <BookNowFloat />
+      </main>
+    </>
+  )
+}
+
+export default App
