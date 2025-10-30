@@ -9,7 +9,7 @@ export default function RoomDetailsScreen() {
     return (
         <section className="w-full mx-auto px-4 pt-20 pb-25">
             <header className="mb-6 text-center">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4 border-b-4 border-yellow-500 pb-2">
+                <h1 className="section-title">
                     Habitaciones
                 </h1>
                 <p className="mt-2 text-sm sm:text-base text-gray-600">

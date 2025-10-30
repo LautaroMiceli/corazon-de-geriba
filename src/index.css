@@ -19,6 +19,24 @@ body,
   min-height: 100dvh;
 }
 
+.section-title{
+  @apply text-3xl w-full text-center font-bold text-gray-800 mb-6 border-b-4 border-yellow-500 pb-2 md:text-4xl
+}
+
+/* --------------------------------- SERVICES -------------------------------- */
+
+.services-container{
+  @apply flex flex-col gap-5 w-full text-center lg:w-80 lg:text-left;
+}
+
+.services-title{
+  @apply text-3xl font-bold text-yellow-800
+}
+
+.services-paragraph{
+  @apply text-gray-700 text-base leading-relaxed
+}
+
 
 
 

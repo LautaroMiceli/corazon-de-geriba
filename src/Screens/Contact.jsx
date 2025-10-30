@@ -4,38 +4,17 @@ import Map from '../Components/Map';
 
 export default function FooterContact() {
 
-  const dataPhoneEmail = [
-    {
-      text: "+55 22 92005-1282",
-      component: <FaPhone className='text-yellow-600' />
-    },
-    {
-      text: "info@coracaodegeriba.com",
-      component: <FaEnvelope className="text-yellow-600" />
-    }
-  ];
 
-  const dataFollowUs = [
-    {
-      href: "https://www.instagram.com/corazondegeriba/",
-      component: <FaInstagram />
-    },
-    {
-      href: "https://wa.me/5522999999999",
-      component: <FaWhatsapp />
-    },
-  ];
+
 
   return (
     <section className="w-full h-screen bg-yellow-50 p-6 flex flex-col items-center justify-center gap-8 sm:gap-10 md:flex-row md:items-start lg:p-12">
-
-      {/* Información de contacto */}
       <div className="flex flex-col md:h-full md:items-center justify-center w-full md:w-1/2 gap-6 text-gray-700">
-        <h2 className="text-3xl w-full text-center font-bold text-gray-800 mb-6 border-b-4 border-yellow-500 pb-2 md:text-4xl">
+        <h2 className="section-title">
           Contactanos
         </h2>
-        <PhoneEmail data={dataPhoneEmail} />
-        <FollowUs dataFollowUs={dataFollowUs} />
+        <PhoneEmail />
+        <FollowUs/>
         <div className='w-full'>
           <span className="font-semibold text-yellow-800">Ubicación</span>
           <p className="text-sm sm:text-base mt-1">
@@ -50,7 +29,17 @@ export default function FooterContact() {
   );
 }
 
-const PhoneEmail = ({ data }) => {
+const PhoneEmail = () => {
+  const data = [
+    {
+      text: "+55 22 92005-1282",
+      component: <FaPhone className='text-yellow-600' />
+    },
+    {
+      text: "info@coracaodegeriba.com",
+      component: <FaEnvelope className="text-yellow-600" />
+    }
+  ]
   return (
     <div className="flex w-full flex-col gap-2 text-sm sm:text-base">
       {data.map((e, i) => (
@@ -63,7 +52,17 @@ const PhoneEmail = ({ data }) => {
   );
 }
 
-const FollowUs = ({ dataFollowUs }) => {
+const FollowUs = () => {
+  const dataFollowUs = [
+    {
+      href: "https://www.instagram.com/corazondegeriba/",
+      component: <FaInstagram />
+    },
+    {
+      href: "https://wa.me/5522999999999",
+      component: <FaWhatsapp />
+    },
+  ];
   return (
     <div className="flex w-full flex-col gap-2">
       <span className="font-semibold text-yellow-800">Síguenos</span>
