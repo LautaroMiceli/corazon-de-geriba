@@ -1,5 +1,5 @@
-import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
-import { useAnimation } from "../context/AnimationContext";
+import { FaStar, FaStarHalfAlt } from "react-icons/fa";
+import { useAnimation } from "../../context/AnimationContext";
 
 export default function BookingRating() {
     const { animationsDone } = useAnimation()
@@ -11,7 +11,6 @@ export default function BookingRating() {
                         <FaStar key={i} className="w-5 h-5" />
                         :
                         <FaStarHalfAlt key={i} className="w-5 h-5" />
-
                 ))}
             </div>
             <div className="flex flex-col leading-tight">

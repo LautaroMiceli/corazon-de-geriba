@@ -20,17 +20,11 @@ body,
 }
 
 
-.hero_image::before {
-  width: 100vw;
-  height: 100%;
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("https://content.r9cdn.net/rimg/dimg/0c/c5/2c53a638-city-41847-17b1a7d5f2c.jpg?");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  z-index: -1;
+
+
+
+.animate-fadeSlide {
+  animation: fadeSlide 1.5s ease-out forwards;
 }
 
 @keyframes fadeSlide {
@@ -45,10 +39,6 @@ body,
   }
 }
 
-.animate-fadeSlide {
-  animation: fadeSlide 1.5s ease-out forwards;
-}
-
 .text-outline {
   color: white;
   text-shadow:
@@ -59,6 +49,16 @@ body,
 }
 
 
+
+
+
+.animate-fade-in-right {
+  animation: fadeInRight 1s ease-out both;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 1s ease-out both;
+}
 
 @keyframes fadeInRight {
   from {
@@ -87,16 +87,6 @@ body,
     filter: blur(0);
   }
 }
-
-.animate-fade-in-right {
-  animation: fadeInRight 1s ease-out both;
-}
-
-.animate-fade-in-left {
-  animation: fadeInLeft 1s ease-out both;
-}
-
-
 
 
 
@@ -179,10 +169,6 @@ body,
   padding-left: 0px;
 }
 
-.carrousel::-webkit-scrollbar {
-  display: none;
-}
-
 @keyframes translate_x {
   from {
     translate: 0;
@@ -192,6 +178,12 @@ body,
     translate: -100%;
   }
 }
+
+.carrousel::-webkit-scrollbar {
+  display: none;
+}
+
+
 
 .reveal_delay_2s {
   animation: fadeIn .5s ease-in forwards;
