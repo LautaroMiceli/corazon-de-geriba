@@ -18,31 +18,27 @@ const Main = () => {
 
   return (
     <section
-      className="relative w-full h-screen bg-cover bg-center bg-no-repeat bg-[url(/hero_image.jpg)] before:absolute before:inset-0 before:bg-black/60 before:z-0"
+      className="inset-0 flex flex-col items-center justify-center text-center text-white z-10 px-4 relative w-full h-dvh bg-cover bg-center bg-no-repeat bg-[url(/hero_image.jpg)] before:absolute before:inset-0 before:bg-black/60 before:z-0"
     >
+      <h1
+        className={`${animationsDone ? "" : "animate-fade-in-right"} text-4xl md:text-5xl font-bold mb-4 z-10`}
+      >
+        Bienvenidos a Coração de Geriba
+      </h1>
 
-      {/* Contenido principal */}
-      <div className="h-screen inset-0 flex flex-col items-center justify-center text-center text-white z-10 px-4">
-        <h1
-          className={`${animationsDone ? "" : "animate-fade-in-right"} text-4xl md:text-5xl font-bold mb-4 z-10`}
-        >
-          Bienvenidos a Coração de Geriba
-        </h1>
+      <span
+        className={`${animationsDone ? "" : "animate-fade-in-left"} text-lg md:text-xl mb-3 z-10`}
+      >
+        <p>
+          Disfruta de una experiencia única en Búzios con atención personalizada y comodidad,
+        </p>
+        <p>
+          avalada por nuestros huéspedes.
+        </p>
+      </span>
 
-        <span
-          className={`${animationsDone ? "" : "animate-fade-in-left"} text-lg md:text-xl mb-3 z-10`}
-        >
-          <p>
-            Disfruta de una experiencia única en Búzios con atención personalizada y comodidad,
-          </p>
-          <p>
-            avalada por nuestros huéspedes.
-          </p>
-        </span>
-
-        <BookingRating />
-        <ReviewCarrousel />
-      </div>
+      <BookingRating />
+      <ReviewCarrousel />
     </section>
   )
 }

@@ -3,37 +3,37 @@ import { Calendar } from "primereact/calendar"
 import { FloatLabel } from "primereact/floatlabel"
 import { InputNumber } from 'primereact/inputnumber';
 import { useSearchParams } from 'react-router-dom'
+import { buildMessage } from '../utils/buildBookingMessage';
 
 const Booking = () => {
-    const [ida, setIda] = useState(null)
-    const [vuelta, setVuelta] = useState(null)
-    const [minVuelta, setMinVuelta] = useState(null)
-    const [persons, setPersons] = useState(1)
-    const [view, setView] = useState(new Date())
     const [searchParams] = useSearchParams();
-    const suite = searchParams.get("suite")
+    const [bookingConfig, setBookingConfig] = useState({
+        ida: null,
+        vuelta: null,
+        persons: 1,
+        view: new Date(),
+        minVuelta: null,
+        suite: searchParams.get("suite")
+    })
+    console.log(bookingConfig)
+
+    const { ida, vuelta, persons, view, minVuelta } = bookingConfig
+
 
     const handleChangeIda = (e) => {
-        setIda(e.value)
+        console.log(e.value)
+        setBookingConfig(prev => ({ ...prev, ida: e.value }))
         if (e.value) {
             const fecha_string = e.value.toLocaleDateString()
             const [day, month, year] = fecha_string.split("/").map(Number)
             const minVuelta = new Date(year, month - 1, day + 1);
-            setMinVuelta(minVuelta)
-            setVuelta(null)
-            setView(minVuelta)
+            setBookingConfig(prev => ({ ...prev, minVuelta: minVuelta }))
+            setBookingConfig(prev => ({ ...prev, view: minVuelta }))
         } else {
-            setVuelta(null)
+            setBookingConfig(prev => ({ ...prev, vuelta: null }))
         }
     }
 
-    const phoneNumber = "5522920051282" // sin + ni espacios
-
-    const buildMessage = () => {
-        const idaStr = ida ? ida.toLocaleDateString() : "—"
-        const vueltaStr = vuelta ? vuelta.toLocaleDateString() : "—"
-        return `Hola, quiero consultar su disponibilidad ${suite ? `de la suite ${suite}` : ""} entre los días ${idaStr} y ${vueltaStr} para ${persons} persona${persons > 1 ? "s" : ""}.`
-    }
 
     const isMobile = () => {
         // simple, robust detection suficiente para este caso
@@ -44,8 +44,9 @@ const Booking = () => {
         e.preventDefault()
         if (!vuelta) return
 
-        const message = buildMessage()
+        const message = buildMessage(bookingConfig)
         const encoded = encodeURIComponent(message)
+        const phoneNumber = "5522920051282"
 
         if (isMobile()) {
             // En móviles intentamos abrir app nativa; si falla, fallback a wa.me
@@ -99,7 +100,7 @@ const Booking = () => {
                     <FloatLabel>
                         <Calendar
                             value={vuelta}
-                            onChange={(e) => setVuelta(e.value)}
+                            onChange={(e) => setBookingConfig({ ...bookingConfig, vuelta: e.value })}
                             dateFormat='dd/mm/yy'
                             showIcon
                             readOnlyInput
@@ -115,7 +116,7 @@ const Booking = () => {
                 <FloatLabel className='w-36 sm:w-40'>
                     <InputNumber
                         value={persons}
-                        onValueChange={(e) => setPersons(e.value)}
+                        onValueChange={(e) => setBookingConfig({ ...bookingConfig, persons: e.value })}
                         showButtons
                         min={1}
                         max={3}
@@ -131,15 +132,12 @@ const Booking = () => {
                 </FloatLabel>
 
                 <div className='flex flex-col gap-3'>
-
                     <button
                         onClick={openWhatsApp}
                         className={`text-white py-2 px-4 sm:py-3 sm:px-5 rounded-3xl shadow-sm/30 text-center transition-colors ${vuelta ? "bg-blue-600 hover:bg-blue-700 cursor-pointer" : "bg-blue-300 cursor-not-allowed"} `}
                     >
                         Consultar disponibilidad
                     </button>
-
-
                     <span className='w-full sm:w-auto p-4 sm:p-2 rounded-xl font-light text-center text-sm'>
                         * Incluye traslados desde y hacia el aeropuerto.
                     </span>

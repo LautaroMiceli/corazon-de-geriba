@@ -8,7 +8,7 @@ export default function FooterContact() {
 
 
   return (
-    <section className="w-full h-screen bg-yellow-50 p-6 flex flex-col items-center justify-center gap-8 sm:gap-10 md:flex-row md:items-start lg:p-12">
+    <section className="w-full h-dvh bg-yellow-50 p-6 flex flex-col items-center justify-center gap-8 sm:gap-10 md:flex-row md:items-start lg:p-12">
       <div className="flex flex-col md:h-full md:items-center justify-center w-full md:w-1/2 gap-6 text-gray-700">
         <h2 className="section-title">
           Contactanos

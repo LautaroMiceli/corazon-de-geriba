@@ -31,8 +31,9 @@ const Services = () => {
             to={"/accommodations"}
             className="
               px-8 py-4
-              bg-blue-500 hover:bg-blue-600
-              text-white font-bold
+              secondary-button
+
+              font-bold
               rounded-full
               shadow-lg
               transition-all duration-300

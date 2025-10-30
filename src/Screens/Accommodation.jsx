@@ -8,7 +8,7 @@ import { roomDataDoble, roomDataTriple } from "../utils/roomData";
 export default function RoomDetailsScreen() {
     return (
         <section className="w-full mx-auto px-4 pt-20 pb-25">
-            <header className="mb-6 text-center">
+            <header className="text-center">
                 <h1 className="section-title">
                     Habitaciones
                 </h1>
@@ -28,7 +28,7 @@ export default function RoomDetailsScreen() {
             </div>
 
             <footer className="mt-8">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-center sm:text-left">
+                <div className="flex flex-col sm:items-center sm:justify-between gap-4 text-center sm:text-left">
                     <p className="text-sm text-gray-600">
                         ¿Querés consultar disponibilidad o reservar? Los botones te llevan a la página de consulta.
                     </p>
@@ -64,7 +64,7 @@ const RoomDetails = ({ room }) => {
 
                 <Link
                     to={room.booking.link}
-                    className="text-white py-2 px-4 sm:py-3 sm:px-5 rounded-3xl shadow-sm/30 text-center bg-blue-600 hover:bg-blue-700 transition-colors text-sm sm:text-base"
+                    className="text-white py-2 px-4 sm:py-3 sm:px-5 rounded-3xl shadow-sm/30 text-center secondary-button transition-colors text-sm sm:text-base"
                 >
                     {room.booking.label}
                 </Link>

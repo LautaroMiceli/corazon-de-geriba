@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useAnimation } from "../context/AnimationContext";
 import { useLocation } from "react-router-dom";
+import SVGCruz from "../Svg/Cruz";
+import SVGHamburguesa from "../Svg/Hamburguesa";
 
 const Header = () => {
     const [hidden, setHidden] = useState(false);
@@ -17,6 +19,7 @@ const Header = () => {
 
             if (currentScrollY > lastScrollY && currentScrollY > 80) {
                 setHidden(true);
+                setMobileOpen(false);
             } else {
                 setHidden(false);
             }
@@ -43,12 +46,16 @@ const Header = () => {
         "fixed top-0 left-0 w-screen z-50 backdrop-blur-sm bg-white/50 shadow-md reveal_delay_2s transition-transform duration-300";
 
     return (
-        <header id="header_main" className={headerClass}>
+        <header
+        className={headerClass}
+        style={{
+                pointerEvents: animationsDone ? "auto" : "none",
+            }} 
+        >
             <div className="max-w-7xl mx-auto flex justify-between items-center h-16 px-6">
-                <div className="flex items-center gap-4">
-                    <img src="/favicon-final.png" width={60} alt="logo" />
-                </div>
 
+                <img src="/favicon-final.png" width={60} alt="logo" />
+                
                 {/* --- BOTÓN HAMBURGUESA (visible en mobile, oculto en desktop) --- */}
                 <button
                     type="button"
@@ -59,13 +66,9 @@ const Header = () => {
                 >
                     {/* simple SVG: cambia entre hamburguesa y cruz */}
                     {mobileOpen ? (
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
+                        <SVGCruz />
                     ) : (
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
+                        <SVGHamburguesa />
                     )}
                 </button>
 
