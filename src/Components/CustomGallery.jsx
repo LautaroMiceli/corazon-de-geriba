@@ -24,7 +24,6 @@ const CustomGallery = ({ images, children, reverse }) => {
         showThumbnailNavigators: false,
         showIndicators: false,
         showItemNavigators: true,
-        autoPlay: true,
         transitionInterval: 4000,
     };
 

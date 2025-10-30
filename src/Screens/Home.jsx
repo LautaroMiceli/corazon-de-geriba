@@ -15,7 +15,7 @@ const Main = () => {
 
   return (
     <section
-      className="inset-0 flex flex-col items-center justify-center text-center text-white z-10 px-4 relative w-full h-dvh bg-cover bg-center bg-no-repeat bg-[url(/hero_image.jpg)] before:absolute before:inset-0 before:bg-black/60 before:z-0"
+      className="inset-0 flex flex-col items-center justify-center text-center text-white z-10 px-4 relative w-full h-dvh bg-cover bg-center bg-no-repeat bg-[url(/hero_image.webp)] before:absolute before:inset-0 before:bg-black/60 before:z-0"
     >
       <h1
         className={`${animationsDone ? "" : "animate-fade-in-right"} text-4xl md:text-5xl font-bold mb-4 z-10`}
@@ -33,7 +33,7 @@ const Main = () => {
           avalada por nuestros huéspedes.
         </p>
       </span>
-
+ 
       <BookingRating animationsDone={animationsDone} />
       <ReviewCarrousel animationsDone={animationsDone} />
     </section>

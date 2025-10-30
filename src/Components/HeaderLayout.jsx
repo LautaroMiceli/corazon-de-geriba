@@ -48,7 +48,7 @@ const Header = () => {
         >
             <div className="max-w-7xl mx-auto flex justify-between items-center h-16 px-6">
 
-                <img src="/favicon-final.png" width={60} alt="logo" />
+                <img src="/favicon-final.webp" width={40} alt="logo" />
                 
                 {/* --- BOTÓN HAMBURGUESA (visible en mobile, oculto en desktop) --- */}
                 <button

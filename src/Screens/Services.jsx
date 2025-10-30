@@ -11,9 +11,9 @@ const Services = () => {
 
       <CustomGallery images={breakfastImages} >
         <div className="services-container">
-          <div className='flex justify-center gap-2 lg:justify-start'>
+          <div className='flex justify-center items-center gap-2 lg:justify-start'>
             <h2 className="services-title">Desayuno</h2>
-            <img src='/sin-tacc.png' className='w-10' />
+            <img src='/sin-tacc.webp' className='w-10' />
           </div>
           <p className="services-paragraph">
             En nuestra posada te espera una experiencia completa con frutas tropicales frescas, panes y tortas caseras, jugos naturales y café brasileño. <b>Somos el único</b> alojamiento de Búzios que ofrece desayunos <b>sin TACC</b> para que puedan comenzar el día con sabor y tranquilidad, en un ambiente relajado y sin contaminación cruzada.
