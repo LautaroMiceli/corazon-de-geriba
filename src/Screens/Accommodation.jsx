@@ -1,57 +1,48 @@
 import React, { useEffect } from "react";
 import { Galleria } from "primereact/galleria";
-import { bedroomImages } from "../utils/galleryImages";
+import { bedroomImages_doble, bedroomImages_triple } from "../utils/galleryImages";
+import { responsiveOptions } from "../utils/galleryImages";
 import { Link } from "react-router-dom";
 
-const BedroomGallery = ({ children, flex_row_reverse }) => {
+const BedroomGallery = ({ children, images, flex_row_reverse }) => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
-    const responsiveOptions = [
-        { breakpoint: "1024px", numVisible: 5 },
-        { breakpoint: "768px", numVisible: 3 },
-        { breakpoint: "560px", numVisible: 1 },
-    ];
-
     const itemTemplate = (item) => (
-        <img
-            src={item.itemImageSrc}
-            alt={item.alt}
-            className="h-60 sm:h-80 md:h-96 object-cover w-full rounded-xl"
-        />
-    );
-    const thumbnailTemplate = (item) => (
-        <img
-            src={item.thumbnailImageSrc}
-            alt={item.alt}
-            className="h-16 w-16 object-cover rounded"
-        />
+        <div className="flex justify-center items-center bg-black/5 rounded-xl h-60 sm:h-80 md:h-[500px]">
+            <img
+                src={item.itemImageSrc}
+                alt={item.alt}
+                className="max-h-full max-w-full object-contain rounded-xl"
+            />
+        </div>
     );
 
     return (
-        <section className="custom w-full px-4 py-6 flex flex-col gap-6 items-center bg-yellow-50">
-            <div className={`flex flex-col items-center gap-6 w-full max-w-6xl 
+        <section className="w-full px-4 py-6 flex flex-col gap-6 items-center mt-20">
+            <div className="flex flex-col items-center gap-6 w-full max-w-6xl lg:gap-20">
+                <div className={`flex flex-col items-center gap-6 w-full max-w-6xl 
                 ${flex_row_reverse ? "lg:flex-row-reverse" : "lg:flex-row"} 
                 lg:gap-20`}
-            >
-                {/* Texto descriptivo */}
-                {children}
-
-                {/* Galería (PrimeReact Galleria) */}
-                <Galleria
-                    className="rounded-xl shadow-lg overflow-hidden bg-black/10 w-full lg:w-auto"
-                    value={bedroomImages}
-                    item={itemTemplate}
-                    thumbnail={thumbnailTemplate}
-                    numVisible={1}
-                    responsiveOptions={responsiveOptions}
-                    circular
-                    autoPlay
-                    transitionInterval={4000}
-                    showThumbnails
-                    style={{ maxWidth: "800px", width: "100%" }}
-                />
+                >
+                    {/* Texto descriptivo */}
+                    {children}
+                    <Galleria
+                        className="rounded-xl shadow-lg overflow-hidden bg-black/30 w-full max-w-3xl"
+                        value={bedroomImages_doble}
+                        item={itemTemplate}
+                        responsiveOptions={responsiveOptions}
+                        circular
+                        showThumbnails={false}         // 🔹 oculta thumbnails
+                        showThumbnailNavigators={false}
+                        showIndicators={false}
+                        showItemNavigators             // flechas laterales
+                        autoPlay
+                        transitionInterval={4000}
+                        style={{ width: "100%", height: "100%" }}
+                    />
+                </div>
             </div>
         </section>
     );
@@ -74,7 +65,7 @@ export default function RoomDetailsScreen({ url, loading = false }) {
 
             {/* Integración de la galería */}
             <div className="mt-8 flex flex-col gap-8">
-                <BedroomGallery flex_row_reverse={false}>
+                <BedroomGallery images={bedroomImages_triple} flex_row_reverse={false}>
                     {/* Suite planta alta */}
                     <article className="w-full sm:w-88 md:w-250 rounded-3xl p-4 sm:p-6 shadow-sm/30 bg-linear-to-br from-[#F9F6F1] to-white text-center lg:text-left">
                         <h2 className="text-lg sm:text-xl font-semibold mb-2 text-yellow-900">
@@ -104,7 +95,7 @@ export default function RoomDetailsScreen({ url, loading = false }) {
                     </article>
                 </BedroomGallery>
 
-                <BedroomGallery flex_row_reverse={true}>
+                <BedroomGallery images={bedroomImages_doble} flex_row_reverse={true}>
                     {/* Suite planta baja */}
                     <article className="w-full sm:w-88 md:w-250 rounded-3xl p-4 sm:p-6 shadow-sm/30 bg-white border border-gray-100 text-center lg:text-left">
                         <h2 className="text-lg sm:text-xl font-semibold mb-2 text-yellow-900">

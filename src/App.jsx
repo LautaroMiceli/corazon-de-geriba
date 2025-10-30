@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import Home from './Screens/Home'
 import Test from './Components/Test'
 import Services from './Screens/Services'
@@ -26,6 +26,7 @@ function App() {
           <Route path='/services' element={<Services />} />
           <Route path='/test' element={<Test />} />
           <Route path='/accommodations' element={<Accommodation />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <BookNowFloat />
       </main>

@@ -1,121 +1,81 @@
-import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
-import { useAnimation } from "../context/AnimationContext";
-import { useLocation } from "react-router-dom";
+import { Galleria } from "primereact/galleria";
+import { bedroomImages, responsiveOptions } from "../utils/galleryImages";
+import { useRef } from "react";
+import { Link } from "react-router-dom";
+import { Button } from 'primereact/button';
 
-export default function Test() {
-    const [hidden, setHidden] = useState(false);
-    const [mobileOpen, setMobileOpen] = useState(false);
-    const { animationsDone } = useAnimation();
-    const location = useLocation();
+const Test = () => {
+    const galleria = useRef(null);
 
-    useEffect(() => {
-        let lastScrollY = window.scrollY;
-
-        const handleScroll = () => {
-            const currentScrollY = window.scrollY;
-
-            if (currentScrollY > lastScrollY && currentScrollY > 80) {
-                setHidden(true);
-            } else {
-                setHidden(false);
-            }
-
-            lastScrollY = currentScrollY;
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
-    const nav_buttons = [
-        { to: "/", text: "Inicio" },
-        { to: "/services", text: "Servicios" },
-        { to: "/accommodations", text: "Habitaciones" },
-        { to: "/contact", text: "Contacto" },
-        { to: "/booking", text: "Reservas" },
-    ];
-
-    // header classes: mantenemos todas tus clases, agregamos control de translate y opacity
-    const headerClass =
-        (location.pathname !== "/" && animationsDone ? "opacity-100 " : "opacity-0 ") +
-        (hidden ? "-translate-y-full " : "translate-y-0 ") +
-        "fixed top-0 left-0 w-screen z-50 backdrop-blur-sm bg-white/50 shadow-md reveal_delay_2s transition-transform duration-300";
-
-    return (
-        <header id="header_main" className={headerClass}>
-            <div className="max-w-7xl mx-auto flex justify-between items-center h-16 px-6">
-                <div className="flex items-center gap-4">
-                    <img src="/favicon-final.png" width={60} alt="logo" />
-                </div>
-
-                {/* --- BOTÓN HAMBURGUESA (visible en mobile, oculto en desktop) --- */}
-                <button
-                    type="button"
-                    aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
-                    aria-expanded={mobileOpen}
-                    onClick={() => setMobileOpen((s) => !s)}
-                    className="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-300"
-                >
-                    {/* simple SVG: cambia entre hamburguesa y cruz */}
-                    {mobileOpen ? (
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    ) : (
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    )}
-                </button>
-
-                {/* --- NAV Desktop (hidden on mobile) --- */}
-                <div className="hidden md:flex">
-                    <NavButtonsList nav_buttons={nav_buttons} onNavigate={() => { }} />
-                </div>
-            </div>
-
-            {/* --- PANEL MOBILE (se despliega bajo el header) ---
-          mantenemos estilos visuales similares (bg, blur, shadow) */}
-            <div
-                className={
-                    "md:hidden transition-max-h duration-300 overflow-hidden " +
-                    (mobileOpen ? "max-h-screen" : "max-h-0")
-                }
-                aria-hidden={!mobileOpen}
-            >
-                <div className="px-6 pb-6">
-                    <NavButtonsList
-                        nav_buttons={nav_buttons}
-                        vertical
-                        onNavigate={() => setMobileOpen(false)} // cierra el menú al navegar
-                    />
-                </div>
-            </div>
-        </header>
+    const itemTemplate = (item) => (
+        <div
+            className="flex justify-center items-center bg-black/5 rounded-xl overflow-hidden w-full
+                 aspect-[4/3] sm:aspect-video md:aspect-[16/9]"
+        >
+            <img
+                src={item.itemImageSrc}
+                alt={item.alt}
+                className="h-full w-auto max-w-full object-contain rounded-xl"
+            />
+        </div>
     );
-}
-
-const NavButtonsList = ({ nav_buttons, vertical = false, onNavigate = () => { } }) => {
-    // vertical -> mobile panel (stack), default -> inline row
-    const baseClass = vertical ? "flex flex-col gap-4 text-gray-800 font-medium" : "flex gap-6 text-gray-800 font-medium";
 
     return (
-        <nav className={baseClass}>
-            {nav_buttons.map((e, i) => (
-                <NavLink
-                    key={i}
-                    to={e.to}
-                    onClick={() => onNavigate()}
-                    className={({ isActive }) =>
-                        isActive
-                            ? "text-yellow-800 text-underline"
-                            : "hover:text-yellow-900 transition-colors text-underline"
-                    }
-                >
-                    {e.text}
-                </NavLink>
-            ))}
-        </nav>
+        <section className="max-h-screen w-full p-12 flex flex-col gap-10 items-center bg-linear-to-b from-yellow-50 via-white to-yellow-50">
+            <div className="flex flex-col items-center gap-10 w-full max-w-6xl lg:flex-row-reverse lg:gap-20">
+                {/* Texto descriptivo */}
+                <div className="flex flex-col gap-5 w-full text-center animate-fade-in lg:w-80 lg:text-left">
+                    <h2 className="text-3xl font-bold text-yellow-800">Habitaciones</h2>
+                    <p className="text-gray-700 text-base leading-relaxed">
+                        Nuestras habitaciones combinan confort y estilo tropical, con vistas al mar, camas
+                        confortables y decoración acogedora. Cada espacio está pensado para que tu estadía
+                        sea relajante y memorable.
+                    </p>
+                    <Link
+                        to={"/accommodations"}
+                        className="px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer text-center"
+                    >
+                        Ver habitaciones
+                    </Link>
+                </div>
+
+                {/* Galería (inline) */}
+                <div className="w-full max-w-3xl">
+                    <Galleria
+                        ref={galleria}
+                        value={bedroomImages}
+                        item={itemTemplate}
+                        responsiveOptions={responsiveOptions}
+                        circular
+                        showThumbnails={false}
+                        showItemNavigators
+                        autoPlay
+                        transitionInterval={4000}
+                        fullScreen           // ← habilita el modo fullscreen y el método show()
+                        style={{ width: "100%" }}
+                    />
+
+                    {/* Botón que abre la galería en fullscreen */}
+                    <div className="mt-4 flex justify-center">
+                        <Button
+                            label="Ver imágenes"
+                            icon="pi pi-images"
+                            className="bg-blue-600 hover:bg-blue-700 text-white rounded-3xl px-6 py-2"
+                            onClick={() => {
+                                // llamada segura para evitar errores si el ref no está listo
+                                if (galleria.current && typeof galleria.current.show === "function") {
+                                    galleria.current.show();
+                                } else {
+                                    // mensaje de fallback: útil para debugging
+                                    console.warn("Galleria no inicializada o fullScreen no está habilitado", galleria.current);
+                                }
+                            }}
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
     );
 };
+
+export default Test;

@@ -14,16 +14,21 @@ const breakfastImages = [
     { itemImageSrc: '/desayuno-13.jpg', thumbnailImageSrc: '/desayuno-13.jpg', alt: 'Vista exterior con desayuno', title: 'Desayuno con vista al jardín' }
 ];
 
-const bedroomImages = [
-    { itemImageSrc: '/habitaciones/1.jpg', thumbnailImageSrc: '/habitaciones/1.jpg', alt: 'Habitación 1', title: 'Habitación 1' },
-    { itemImageSrc: '/habitaciones/2.jpg', thumbnailImageSrc: '/habitaciones/2.jpg', alt: 'Habitación 2', title: 'Habitación 2' },
-    { itemImageSrc: '/habitaciones/3.jpg', thumbnailImageSrc: '/habitaciones/3.jpg', alt: 'Habitación 3', title: 'Habitación 3' },
-    { itemImageSrc: '/habitaciones/4.jpg', thumbnailImageSrc: '/habitaciones/4.jpg', alt: 'Habitación 4', title: 'Habitación 4' },
-    { itemImageSrc: '/habitaciones/5.jpg', thumbnailImageSrc: '/habitaciones/5.jpg', alt: 'Habitación 5', title: 'Habitación 5' },
-    { itemImageSrc: '/habitaciones/6.jpg', thumbnailImageSrc: '/habitaciones/6.jpg', alt: 'Habitación 6', title: 'Habitación 6' },
-    { itemImageSrc: '/habitaciones/7.jpg', thumbnailImageSrc: '/habitaciones/7.jpg', alt: 'Habitación 7', title: 'Habitación 7' },
-    { itemImageSrc: '/habitaciones/8.jpg', thumbnailImageSrc: '/habitaciones/8.jpg', alt: 'Habitación 8', title: 'Habitación 8' }
+const bedroomImages_doble = [
+    { itemImageSrc: '/habitaciones/doble/1.jpg', thumbnailImageSrc: '/habitaciones/doble/1.jpg', alt: 'Habitación 1', title: 'Habitación 1' },
+    { itemImageSrc: '/habitaciones/doble/2.jpg', thumbnailImageSrc: '/habitaciones/doble/2.jpg', alt: 'Habitación 2', title: 'Habitación 2' },
+    { itemImageSrc: '/habitaciones/doble/3.jpg', thumbnailImageSrc: '/habitaciones/doble/3.jpg', alt: 'Habitación 3', title: 'Habitación 3' },
+    { itemImageSrc: '/habitaciones/doble/4.jpg', thumbnailImageSrc: '/habitaciones/doble/4.jpg', alt: 'Habitación 4', title: 'Habitación 4' },
+    { itemImageSrc: '/habitaciones/doble/5.jpg', thumbnailImageSrc: '/habitaciones/doble/5.jpg', alt: 'Habitación 5', title: 'Habitación 5' },
 ];
+
+const bedroomImages_triple = [
+    { itemImageSrc: '/habitaciones/triple/1.jpg', thumbnailImageSrc: '/habitaciones/triple/1.jpg', alt: 'Habitación 1', title: 'Habitación 1' },
+    { itemImageSrc: '/habitaciones/triple/2.jpg', thumbnailImageSrc: '/habitaciones/triple/2.jpg', alt: 'Habitación 2', title: 'Habitación 2' },
+    { itemImageSrc: '/habitaciones/triple/3.jpg', thumbnailImageSrc: '/habitaciones/triple/3.jpg', alt: 'Habitación 3', title: 'Habitación 3' },
+];
+
+const bedroomImages = [...bedroomImages_doble, ...bedroomImages_triple]
 
 const responsiveOptions = [
     { breakpoint: '1024px', numVisible: 5 },
@@ -32,4 +37,4 @@ const responsiveOptions = [
 ];
 
 
-export { breakfastImages, bedroomImages, responsiveOptions }
+export { breakfastImages,bedroomImages, bedroomImages_doble, bedroomImages_triple, responsiveOptions }

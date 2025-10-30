@@ -19,20 +19,6 @@ body,
   min-height: 100dvh;
 }
 
-
-.hero_image::before {
-  width: 100vw;
-  height: 100%;
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("https://content.r9cdn.net/rimg/dimg/0c/c5/2c53a638-city-41847-17b1a7d5f2c.jpg?");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  z-index: -1;
-}
-
 @keyframes fadeSlide {
   0% {
     opacity: 0;
@@ -104,7 +90,7 @@ body,
 
 .booking_image {
   background-image: url("/booking_image.jpg");
-  background-position: 0px -435px;
+  background-position: 0px -265px;
   background-repeat: no-repeat;
 }
 
