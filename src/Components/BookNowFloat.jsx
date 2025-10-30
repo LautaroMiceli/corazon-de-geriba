@@ -1,11 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { useAnimation } from '../context/AnimationContext';
 import { useLocation } from 'react-router-dom';
 
 const BookNowFloat = () => {
     const location = useLocation()
-    const { animationsDone } = useAnimation()
 
     if (location.pathname.startsWith('/booking')) return null
 
@@ -25,7 +23,6 @@ const BookNowFloat = () => {
     left-1/2 transform -translate-x-1/2 md:left-auto md:right-8 lg:right-10
     z-100
     shine
-    ${animationsDone ? "opacity-100" : "reveal_delay_2s"}
   `}
         >
             Reserva ahora!

@@ -1,11 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
-import { useAnimation } from "../../context/AnimationContext";
 import reviews from "../../utils/reviews";
 
 
 // --- Componente principal decide según breakpoint ---
-export const ReviewCarrousel = () => {
+export const ReviewCarrousel = ({ animationsDone }) => {
     const [isMobile, setIsMobile] = useState(
         typeof window !== "undefined" ? window.innerWidth < 768 : false
     );
@@ -16,12 +15,11 @@ export const ReviewCarrousel = () => {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    return isMobile ? <ReviewCarrouselMobile /> : <ReviewCarrouselDesktop />;
+    return isMobile ? <ReviewCarrouselMobile animationsDone={animationsDone} /> : <ReviewCarrouselDesktop animationsDone={animationsDone} />;
 };
 
 // ---------------- MOBILE ----------------
-export const ReviewCarrouselMobile = () => {
-    const { animationsDone } = useAnimation();
+export const ReviewCarrouselMobile = ({animationsDone}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isTransitioning, setIsTransitioning] = useState(true);
     const intervalRef = useRef(null);
@@ -85,8 +83,7 @@ export const ReviewCarrouselMobile = () => {
 
 
 // ---------------- DESKTOP ----------------
-export const ReviewCarrouselDesktop = () => {
-    const { animationsDone } = useAnimation();
+export const ReviewCarrouselDesktop = ({animationsDone}) => {
     return (
         <section className="w-full md:px-20 relative">
             <div className={`carrousel ${animationsDone ? "" : "fade-in-carrousel"} `}>

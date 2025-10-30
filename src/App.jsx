@@ -1,9 +1,7 @@
-import { useState } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Home from './Screens/Home'
 import Test from './Components/Test'
 import Services from './Screens/Services'
-import AboutUs from './Screens/AboutUs'
 import BookNowFloat from './Components/BookNowFloat'
 import Booking from './Components/Booking'
 import Contact from './Screens/Contact'
@@ -13,8 +11,6 @@ import Accommodation from './Screens/Accommodation'
 
 
 function App() {
-
-
   return (
     <>
       <Header />

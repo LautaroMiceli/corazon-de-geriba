@@ -1,10 +1,5 @@
-import React from 'react'
-import Contact from './Contact'
-import FooterContact from './Contact'
-import Services from './Services'
-import Booking from '../Components/Booking'
+import React, { useState } from 'react'
 import { ReviewCarrousel } from '../Components/HomeComponents/ReviewCarrousel'
-import { useAnimation } from '../context/AnimationContext'
 import BookingRating from '../Components/HomeComponents/BookingRating'
 
 const Home = () => (
@@ -14,7 +9,9 @@ const Home = () => (
 export default Home
 
 const Main = () => {
-  const { animationsDone } = useAnimation()
+  const [animationsDone] = useState(sessionStorage.getItem("animationsDone"));
+
+  sessionStorage.setItem("animationsDone", true)
 
   return (
     <section
@@ -37,8 +34,8 @@ const Main = () => {
         </p>
       </span>
 
-      <BookingRating />
-      <ReviewCarrousel />
+      <BookingRating animationsDone={animationsDone} />
+      <ReviewCarrousel animationsDone={animationsDone} />
     </section>
   )
 }

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { useAnimation } from "../context/AnimationContext";
 import { useLocation } from "react-router-dom";
 import SVGCruz from "../Svg/Cruz";
 import SVGHamburguesa from "../Svg/Hamburguesa";
@@ -8,7 +7,6 @@ import SVGHamburguesa from "../Svg/Hamburguesa";
 const Header = () => {
     const [hidden, setHidden] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
-    const { animationsDone } = useAnimation();
     const location = useLocation();
 
     useEffect(() => {
@@ -41,16 +39,12 @@ const Header = () => {
 
     // header classes: mantenemos todas tus clases, agregamos control de translate y opacity
     const headerClass =
-        (location.pathname !== "/" && animationsDone ? "opacity-100 " : "opacity-0 ") +
         (hidden ? "-translate-y-full " : "translate-y-0 ") +
         "fixed top-0 left-0 w-screen z-50 backdrop-blur-sm bg-white/50 shadow-md reveal_delay_2s transition-transform duration-300";
 
     return (
         <header
         className={headerClass}
-        style={{
-                pointerEvents: animationsDone ? "auto" : "none",
-            }} 
         >
             <div className="max-w-7xl mx-auto flex justify-between items-center h-16 px-6">
 
