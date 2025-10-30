@@ -1,17 +1,17 @@
 const breakfastImages = [
-    { itemImageSrc: '/desayuno-1.jpg', thumbnailImageSrc: '/desayuno-1.jpg', alt: 'Desayuno en la posada', title: 'Desayuno buffet' },
-    { itemImageSrc: '/desayuno-2.jpg', thumbnailImageSrc: '/desayuno-2.jpg', alt: 'Mesa con frutas y café', title: 'Variedad de frutas frescas' },
-    { itemImageSrc: '/desayuno-3.jpg', thumbnailImageSrc: '/desayuno-3.jpg', alt: 'Panadería artesanal', title: 'Pan y medialunas recién horneadas' },
-    { itemImageSrc: '/desayuno-4.jpg', thumbnailImageSrc: '/desayuno-4.jpg', alt: 'Vista del salón de desayuno', title: 'Ambiente acogedor' },
-    { itemImageSrc: '/desayuno-5.jpg', thumbnailImageSrc: '/desayuno-5.jpg', alt: 'Café servido en mesa', title: 'Café de especialidad' },
-    { itemImageSrc: '/desayuno-6.jpg', thumbnailImageSrc: '/desayuno-6.jpg', alt: 'Jugos naturales', title: 'Jugos tropicales naturales' },
-    { itemImageSrc: '/desayuno-7.jpg', thumbnailImageSrc: '/desayuno-7.jpg', alt: 'Buffet con variedad de productos', title: 'Buffet completo' },
-    { itemImageSrc: '/desayuno-8.jpg', thumbnailImageSrc: '/desayuno-8.jpg', alt: 'Huevos y tostadas', title: 'Desayuno americano' },
-    { itemImageSrc: '/desayuno-9.jpg', thumbnailImageSrc: '/desayuno-9.jpg', alt: 'Cereales y yogures', title: 'Opciones saludables' },
-    { itemImageSrc: '/desayuno-10.jpg', thumbnailImageSrc: '/desayuno-10.jpg', alt: 'Vista general del comedor', title: 'Espacio luminoso y cómodo' },
-    { itemImageSrc: '/desayuno-11.jpg', thumbnailImageSrc: '/desayuno-11.jpg', alt: 'Mesa servida para dos', title: 'Atención personalizada' },
-    { itemImageSrc: '/desayuno-12.jpg', thumbnailImageSrc: '/desayuno-12.jpg', alt: 'Variedad de infusiones', title: 'Tés y hierbas naturales' },
-    { itemImageSrc: '/desayuno-13.jpg', thumbnailImageSrc: '/desayuno-13.jpg', alt: 'Vista exterior con desayuno', title: 'Desayuno con vista al jardín' }
+    { itemImageSrc: '/desayuno/1.jpg', thumbnailImageSrc: '/desayuno/1.jpg', alt: 'Desayuno en la posada', title: 'Desayuno buffet' },
+    { itemImageSrc: '/desayuno/2.jpg', thumbnailImageSrc: '/desayuno/2.jpg', alt: 'Mesa con frutas y café', title: 'Variedad de frutas frescas' },
+    { itemImageSrc: '/desayuno/3.jpg', thumbnailImageSrc: '/desayuno/3.jpg', alt: 'Panadería artesanal', title: 'Pan y medialunas recién horneadas' },
+    { itemImageSrc: '/desayuno/4.jpg', thumbnailImageSrc: '/desayuno/4.jpg', alt: 'Vista del salón de desayuno', title: 'Ambiente acogedor' },
+    { itemImageSrc: '/desayuno/5.jpg', thumbnailImageSrc: '/desayuno/5.jpg', alt: 'Café servido en mesa', title: 'Café de especialidad' },
+    { itemImageSrc: '/desayuno/6.jpg', thumbnailImageSrc: '/desayuno/6.jpg', alt: 'Jugos naturales', title: 'Jugos tropicales naturales' },
+    { itemImageSrc: '/desayuno/7.jpg', thumbnailImageSrc: '/desayuno/7.jpg', alt: 'Buffet con variedad de productos', title: 'Buffet completo' },
+    { itemImageSrc: '/desayuno/8.jpg', thumbnailImageSrc: '/desayuno/8.jpg', alt: 'Huevos y tostadas', title: 'Desayuno americano' },
+    { itemImageSrc: '/desayuno/9.jpg', thumbnailImageSrc: '/desayuno/9.jpg', alt: 'Cereales y yogures', title: 'Opciones saludables' },
+    { itemImageSrc: '/desayuno/10.jpg', thumbnailImageSrc: '/desayuno/10.jpg', alt: 'Vista general del comedor', title: 'Espacio luminoso y cómodo' },
+    { itemImageSrc: '/desayuno/11.jpg', thumbnailImageSrc: '/desayuno/11.jpg', alt: 'Mesa servida para dos', title: 'Atención personalizada' },
+    { itemImageSrc: '/desayuno/12.jpg', thumbnailImageSrc: '/desayuno/12.jpg', alt: 'Variedad de infusiones', title: 'Tés y hierbas naturales' },
+    { itemImageSrc: '/desayuno/13.jpg', thumbnailImageSrc: '/desayuno/13.jpg', alt: 'Vista exterior con desayuno', title: 'Desayuno con vista al jardín' }
 ];
 
 const bedroomImages_doble = [
