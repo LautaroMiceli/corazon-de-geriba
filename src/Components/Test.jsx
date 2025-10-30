@@ -10,7 +10,7 @@ const Test = () => {
     const itemTemplate = (item) => (
         <div
             className="flex justify-center items-center bg-black/5 rounded-xl overflow-hidden w-full
-                 aspect-[4/3] sm:aspect-video md:aspect-[16/9]"
+                aspect-4/3 sm:aspect-video md:aspect-video"
         >
             <img
                 src={item.itemImageSrc}
