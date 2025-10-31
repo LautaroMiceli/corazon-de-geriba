@@ -83,7 +83,7 @@ const Booking = () => {
 
             <div className='flex flex-col flex-wrap items-center justify-center gap-6 sm:gap-10 mt-6 bg-white/95 p-8 sm:p-10 sm:pb-2 rounded-xl w-full max-w-4xl'>
 
-                <div className='flex flex-col items-center gap-8 sm:gap-8 w-full sm:w-auto'>
+                <div className='flex flex-col items-center gap-8 sm:gap-8 w-full sm:w-auto md:flex-row 2xl:flex-col'>
                     <FloatLabel>
                         <Calendar
                             value={ida}

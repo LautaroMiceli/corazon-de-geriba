@@ -54,7 +54,7 @@ export const ReviewCarrouselMobile = ({animationsDone}) => {
     const transitionStyle = isTransitioning ? "duration-700 ease-in-out" : "duration-0";
 
     return (
-        <section className="w-full overflow-hidden relative px-4 mt-1">
+        <section className="w-full overflow-hidden relative px-4 mt-1 xl:scale-[0.2]">
             <div
                 className={`flex ${transitionStyle} ${animationsDone ? "" : "fade-in-carrousel"}`}
                 style={{
@@ -103,7 +103,7 @@ const ReviewCard = ({ review }) => {
     const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
 
     return (
-        <div className="bg-white/90 p-6 rounded-lg shadow-md min-h-[180px] flex flex-col items-start gap-3 w-full md:w-80">
+        <div className="bg-white/90 p-6 rounded-lg shadow-md min-h-[180px] flex flex-col items-start gap-3 w-full md:w-80 lg:h-60 2xl:h-auto">
             <div className="flex items-center gap-3 w-full justify-between">
                 <div className="flex flex-col">
                     <h3 className="font-semibold text-black text-lg">{review.name}</h3>

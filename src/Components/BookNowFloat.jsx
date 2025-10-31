@@ -19,7 +19,7 @@ const BookNowFloat = () => {
     transition-transform duration-200 hover:scale-105
     cursor-pointer
     fixed
-    bottom-6 md:bottom-10 lg:bottom-12
+    bottom-6 md:bottom-5 lg:bottom-7
     left-1/2 transform -translate-x-1/2 md:left-auto md:right-8 lg:right-10
     z-100
     shine
