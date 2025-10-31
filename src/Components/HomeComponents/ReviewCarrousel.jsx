@@ -54,7 +54,7 @@ export const ReviewCarrouselMobile = ({animationsDone}) => {
     const transitionStyle = isTransitioning ? "duration-700 ease-in-out" : "duration-0";
 
     return (
-        <section className="w-full overflow-hidden relative px-4 mt-10">
+        <section className="w-full overflow-hidden relative px-4 mt-1">
             <div
                 className={`flex ${transitionStyle} ${animationsDone ? "" : "fade-in-carrousel"}`}
                 style={{
@@ -127,7 +127,7 @@ const ReviewCard = ({ review }) => {
 // --- Desktop: grid original ---
 const ReviewMap = () => {
     return (
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-5 group">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-5 group touch-none">
             {reviews.map((review, index) => (
                 <ReviewCard key={index} review={review} />
             ))}

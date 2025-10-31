@@ -126,7 +126,7 @@ body,
 
 
 .booking_image {
-  background-image: url("/assets/booking_image.webp");
+  background-image: url("/booking_image.webp");
   background-position: 0px -265px;
   background-repeat: no-repeat;
 }
