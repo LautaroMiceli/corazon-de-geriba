@@ -44,25 +44,34 @@ const Header = () => {
 
     return (
         <header
-        className={headerClass}
+            className={headerClass}
         >
             <div className="max-w-7xl mx-auto flex justify-between items-center h-16 px-6">
 
                 <img src="/favicon-final.webp" width={40} alt="logo" />
-                
+
                 {/* --- BOTÓN HAMBURGUESA (visible en mobile, oculto en desktop) --- */}
                 <button
                     type="button"
                     aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
                     aria-expanded={mobileOpen}
                     onClick={() => setMobileOpen((s) => !s)}
-                    className="md:hidden p-2 rounded-md focus:outline-none hover:scale-[]1.1"
+                    className={`
+    md:hidden flex items-center gap-2 p-3 rounded-lg
+    bg-gray-100 hover:bg-gray-200 shadow-md
+
+  `}
                 >
-                    {/* simple SVG: cambia entre hamburguesa y cruz */}
                     {mobileOpen ? (
-                        <SVGCruz />
+                        <div className="flex items-center gap-2">
+                            <span className="font-bold text-gray-800 select-none">Cerrar</span>
+                            <SVGCruz className="w-6 h-6 text-gray-800" />
+                        </div>
                     ) : (
-                        <SVGHamburguesa />
+                        <div className="flex items-center gap-2">
+                            <span className="font-bold text-gray-800 select-none">Menú</span>
+                            <SVGHamburguesa className="w-6 h-6 text-gray-800" />
+                        </div>
                     )}
                 </button>
 

@@ -226,13 +226,12 @@ body,
 
 @media screen and (height <= 700px) {
   .booking_image{
-    background-position: 1000px -100px;
-  }
+    background-position: -1000px -200px;}
 }
 
 @media screen and (width <= 600px) {
   .booking_image{
-    background-position: -1400px -200px;
+    background-position: -1000px -200px;
   }
 }
 
