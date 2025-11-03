@@ -25,7 +25,7 @@ const BookNowFloat = () => {
     shine
   `}
         >
-            Reserva ahora!
+            Reserva ahora
         </Link>
 
     )

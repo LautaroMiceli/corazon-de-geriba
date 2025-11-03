@@ -48,9 +48,9 @@ const Header = () => {
         >
             <div className="max-w-7xl mx-auto flex justify-between items-center h-16 px-6">
 
-                <img src="/favicon-final.webp" width={40} alt="logo" />
+                <img src="/favicon-final.webp" width={40} alt="Logo principal del header" />
 
-                {/* --- BOTÓN HAMBURGUESA (visible en mobile, oculto en desktop) --- */}
+                {/* --- BOTÓN HAMBURGUESA  --- */}
                 <button
                     type="button"
                     aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
@@ -58,9 +58,7 @@ const Header = () => {
                     onClick={() => setMobileOpen((s) => !s)}
                     className={`
     md:hidden flex items-center gap-2 p-3 rounded-lg
-    bg-gray-100 hover:bg-gray-200 shadow-md
-
-  `}
+    bg-gray-100 hover:bg-gray-200 shadow-md cursor-pointer`}
                 >
                     {mobileOpen ? (
                         <div className="flex items-center gap-2">
@@ -75,14 +73,13 @@ const Header = () => {
                     )}
                 </button>
 
-                {/* --- NAV Desktop (hidden on mobile) --- */}
+                {/* --- NAV Desktop --- */}
                 <div className="hidden md:flex">
-                    <NavButtonsList nav_buttons={nav_buttons} onNavigate={() => { }} />
+                    <NavButtonsList nav_buttons={nav_buttons} />
                 </div>
             </div>
 
-            {/* --- PANEL MOBILE (se despliega bajo el header) ---
-          mantenemos estilos visuales similares (bg, blur, shadow) */}
+            {/* --- PANEL MOBILE ---*/}
             <div
                 className={
                     "md:hidden transition-max-h duration-300 overflow-hidden " +

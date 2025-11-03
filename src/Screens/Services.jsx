@@ -12,8 +12,8 @@ const Services = () => {
       <CustomGallery images={breakfastImages} >
         <div className="services-container">
           <div className='flex justify-center items-center gap-2 lg:justify-start'>
-            <h2 className="services-title">Desayuno</h2>
-            <img src='/sin-tacc.webp' className='w-10' />
+            <h3 className="services-title">Desayuno</h3>
+            <img src='/sin-tacc.webp' alt='Logo sin TACC - apto para celíacos' className='w-10' />
           </div>
           <p className="services-paragraph">
             En nuestra posada te espera una experiencia completa con frutas tropicales frescas, panes y tortas caseras, jugos naturales y café brasileño. <b>Somos el único</b> alojamiento de Búzios que ofrece desayunos <b>sin TACC</b> para que puedan comenzar el día con sabor y tranquilidad, en un ambiente relajado y sin contaminación cruzada.
@@ -23,7 +23,7 @@ const Services = () => {
 
       <CustomGallery images={bedroomImages} reverse={true}>
         <div className="services-container">
-          <h2 className="services-title">Habitaciones</h2>
+          <h3 className="services-title">Habitaciones</h3>
           <p className="services-paragraph">
             Nuestras habitaciones combinan confort y estilo tropical, con vistas al mar, camas confortables y decoración acogedora. Cada espacio está pensado para que tu estadía sea relajante y memorable.
           </p>
@@ -41,6 +41,7 @@ const Services = () => {
               cursor-pointer
               text-center
             "
+            aria-label="Ver todas las habitaciones disponibles en la posada Corazón de Geribá"
           >
             Ver habitaciones
           </Link>

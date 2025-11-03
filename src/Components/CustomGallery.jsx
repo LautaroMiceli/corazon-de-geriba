@@ -28,14 +28,14 @@ const CustomGallery = ({ images, children, reverse }) => {
     };
 
     return (
-        <div className={`max-h-screen w-full px-12 pb-5 flex flex-col gap-5 items-center justify-center lg:flex-row lg:gap-10 ${reverse ? "lg:flex-row-reverse" : ""}`}>
+        <article className={`max-h-screen w-full px-12 pb-5 flex flex-col gap-5 items-center justify-center lg:flex-row lg:gap-10 ${reverse ? "lg:flex-row-reverse" : ""}`}>
             {children}
             <Galleria
                 className="w-full h-full rounded-xl shadow-lg overflow-hidden bg-black/30 max-w-3xl"
                 {...galleriaProps}
             />
 
-        </div>
+        </article>
     )
 }
 

@@ -54,7 +54,7 @@ export const ReviewCarrouselMobile = ({animationsDone}) => {
     const transitionStyle = isTransitioning ? "duration-700 ease-in-out" : "duration-0";
 
     return (
-        <section className="w-full overflow-hidden relative px-4 mt-1 xl:scale-[0.2]">
+        <section className="w-full overflow-hidden relative px-4 mt-1 xl:scale-[0.2]" aria-roledescription="Carrousel con reseñas de la posada">
             <div
                 className={`flex ${transitionStyle} ${animationsDone ? "" : "fade-in-carrousel"}`}
                 style={{

@@ -28,8 +28,6 @@ const Main = () => {
       >
         <p>
           Disfruta de una experiencia única en Búzios con atención personalizada y comodidad,
-        </p>
-        <p>
           avalada por nuestros huéspedes.
         </p>
       </span>
