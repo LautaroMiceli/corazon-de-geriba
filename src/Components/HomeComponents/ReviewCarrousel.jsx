@@ -106,7 +106,7 @@ const ReviewCard = ({ review }) => {
         <div className="bg-white/90 p-6 rounded-lg shadow-md min-h-[180px] flex flex-col items-start gap-3 w-full md:w-80 lg:h-60 2xl:h-auto">
             <div className="flex items-center gap-3 w-full justify-between">
                 <div className="flex flex-col">
-                    <h4 className="font-semibold text-black text-lg">{review.name}</h4>
+                    <span className="font-semibold text-black text-lg">{review.name}</span>
                 </div>
                 <img src={`/flags/${review.from}.png`} alt={`${review.from} flag`} className="w-10 h-6 object-contain" />
             </div>
