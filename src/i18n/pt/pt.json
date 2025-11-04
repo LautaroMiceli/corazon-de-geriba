@@ -74,7 +74,7 @@
         "breakfast": {
             "title": "Café da manhã",
             "altLogo": "Logo sem glúten - adequado para celíacos",
-            "description": "Em nossa pousada, espera por você uma experiência completa com frutas tropicais frescas, pães e bolos caseiros, sucos naturais e café brasileiro. <b>Somos a única</b> hospedagem em Búzios que oferece <b>café da manhã sem glúten</b> para que você comece o dia com sabor e tranquilidade, em um ambiente relaxado e livre de contaminação cruzada."
+            "description": "Em nossa pousada, espera por você uma experiência completa com frutas tropicais frescas, pães e bolos caseiros, sucos naturais e café brasileiro. <bold>Somos a única</bold> hospedagem em Búzios que oferece <bold>café da manhã sem glúten</bold> para que você comece o dia com sabor e tranquilidade, em um ambiente relaxado e livre de contaminação cruzada."
         },
         "bedroom": {
             "title": "Quartos",
