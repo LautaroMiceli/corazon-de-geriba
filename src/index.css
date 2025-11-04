@@ -9,7 +9,6 @@ html,
 body,
 #root {
   cursor: url("/cursor.png")  -16 -16, auto;
-  height: 100dvh;
   width: 100%;
 }
 
@@ -234,7 +233,6 @@ body,
     background-position: -1000px -200px;
   }
 }
-
 
 
 
