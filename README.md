@@ -8,4 +8,4 @@
 
 
 Buenas ideas:
-1. 
+1. Agregar la opción de enviar la solicitud de disponibilidad por email.                                                

@@ -1,7 +1,6 @@
 import React from 'react'
-import { locale, addLocale, updateLocaleOption, updateLocaleOptions, localeOption, localeOptions } from 'primereact/api';
+import { locale, addLocale } from 'primereact/api';
 import 'primereact/resources/themes/lara-light-blue/theme.css'
-import 'primereact/resources/primereact.min.css'
 import 'primeicons/primeicons.css'
 
 const PrimeReactContext = ({children}) => {
