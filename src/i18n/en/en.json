@@ -1,0 +1,139 @@
+{
+    "common": {
+        "header-nav": [
+            "Home",
+            "Services",
+            "Rooms",
+            "Contact",
+            "Bookings"
+        ],
+        "services": "View rooms",
+        "accommodation": "Check availability",
+        "booking": [
+            "Check-in",
+            "Check-out",
+            "Number of guests",
+            "Check availability"
+        ],
+        "header-button": {
+            "close": "Close",
+            "open": "Open"
+        },
+        "bookNow": "Book now"
+    },
+    "home": {
+        "hero-title": "Welcome to Corazón de Geriba",
+        "hero-subtitle": "Enjoy a unique experience in Búzios with personalized service and comfort, endorsed by our guests.",
+        "reviews": [
+            {
+                "name": "Eduardo",
+                "text": "The hosts are excellent and provided full attention and support. The breakfast is very good!",
+                "from": "brasil",
+                "score": 9
+            },
+            {
+                "name": "Leli",
+                "text": "Very nice place, warm and family-friendly atmosphere. The breakfast was very abundant. The hosts are always attentive.",
+                "from": "argentina",
+                "score": 10
+            },
+            {
+                "name": "Daniel",
+                "text": "Everything was perfect, from the very attentive hosts concerned about guests’ comfort, to the cleanliness of the place. The setup is very nice and the good air conditioning along with a delicious breakfast is much appreciated.",
+                "from": "chile",
+                "score": 10
+            },
+            {
+                "name": "Patrícia",
+                "text": "Excellent attention, very attentive, delicious breakfast, close to the beach (2 minutes). Spacious room. It was great and I recommend it.",
+                "from": "brasil",
+                "score": 10
+            },
+            {
+                "name": "Armand",
+                "text": "We really liked it! A very attentive family and an excellent breakfast.",
+                "from": "brasil",
+                "score": 9
+            },
+            {
+                "name": "Victor",
+                "text": "Truly a unique experience. So far the best hosts I’ve had. Very willing to help. Breakfast was also spectacular. Honestly 100% recommendable. I would come back gladly.",
+                "from": "chile",
+                "score": 10
+            },
+            {
+                "name": "Raimundo",
+                "text": "I was very well received.",
+                "from": "brasil",
+                "score": 9
+            }
+        ]
+    },
+    "services": {
+        "sectionTitle": "Our services",
+        "breakfast": {
+            "title": "Breakfast",
+            "altLogo": "Gluten-free logo - suitable for celiacs",
+            "description": "At our inn, a complete experience awaits you with fresh tropical fruits, homemade breads and cakes, natural juices, and Brazilian coffee. <bold>We are the only</bold> accommodation in Búzios offering <bold>gluten-free breakfasts</bold> so you can start your day with flavor and peace of mind, in a relaxed environment and free from cross-contamination."
+        },
+        "bedroom": {
+            "title": "Bedrooms",
+            "description": "Our rooms combine comfort and tropical style, with sea views, cozy beds, and warm decoration. Every space is designed to make your stay relaxing and memorable.",
+            "button": "View rooms",
+            "buttonAriaLabel": "View all available rooms at Corazón de Geribá inn"
+        }
+    },
+    "accommodation": {
+        "sectionTitle": "Bedrooms",
+        "sectionSubtitle": "Spaces equipped for a comfortable stay — services included.",
+        "footerText": "Would you like to check availability or make a reservation? The buttons take you to the inquiry page.",
+        "rooms": {
+            "triple": {
+                "title": "Upper Floor Suite · Triple",
+                "description": "Ideal for two people, with the option to include an extra bed.",
+                "features": [
+                    "Private bathroom with toiletries and towels included.",
+                    "Entertainment: Smart TV and streaming services.",
+                    "Beds: double + optional extra.",
+                    "Climate control: air conditioning.",
+                    "Storage: wardrobe and luggage space."
+                ],
+                "tag": "Private access · Upper floor",
+                "booking": {
+                    "label": "Check availability",
+                    "link": "/booking?suite=triple"
+                }
+            },
+            "doble": {
+                "title": "Ground Floor Suite · Double",
+                "description": "Ideal for two people, with a double bed and full comfort.",
+                "features": [
+                    "Private bathroom with toiletries and bed linen.",
+                    "Entertainment: Smart TV and streaming services.",
+                    "Double bed with high-quality bed linen.",
+                    "Climate control: air conditioning.",
+                    "Spacious wardrobe for added comfort."
+                ],
+                "tag": "Private access · Ground floor",
+                "booking": {
+                    "label": "Check availability",
+                    "link": "/booking?suite=doble"
+                }
+            }
+        }
+    },
+    "contact": {
+        "sectionTitle": "Contact us",
+        "followUsTitle": "Follow us",
+        "locationTitle": "Location",
+        "locationAddress": "Rua das Palmeiras, 123, Geribá, Búzios - RJ, Brazil"
+    },
+    "booking": {
+        "title": "Book your stay",
+        "checkInLabel": "Check in",
+        "checkOutLabel": "Check out",
+        "personsLabel": "Number of guests",
+        "buttonLabel": "Check availability",
+        "note": "* Includes transfers to and from the airport."
+    }
+}

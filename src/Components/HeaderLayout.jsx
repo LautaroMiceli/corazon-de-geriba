@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 import SVGCruz from "../Svg/Cruz";
 import SVGHamburguesa from "../Svg/Hamburguesa";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Header = () => {
+    const { t } = useTranslation()
+    const navButtons = t("common.header-nav", { returnObjects: true })
     const [hidden, setHidden] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
-    const location = useLocation();
 
     useEffect(() => {
         let lastScrollY = window.scrollY;
@@ -30,11 +32,11 @@ const Header = () => {
     }, []);
 
     const nav_buttons = [
-        { to: "/", text: "Inicio" },
-        { to: "/services", text: "Servicios" },
-        { to: "/accommodations", text: "Habitaciones" },
-        { to: "/contact", text: "Contacto" },
-        { to: "/booking", text: "Reservas" },
+        { to: "/", text: navButtons[0] },
+        { to: "/services", text: navButtons[1] },
+        { to: "/accommodations", text: navButtons[2] },
+        { to: "/contact", text: navButtons[3] },
+        { to: "/booking", text: navButtons[4] },
     ];
 
     // header classes: mantenemos todas tus clases, agregamos control de translate y opacity
@@ -48,12 +50,12 @@ const Header = () => {
         >
             <div className="max-w-7xl mx-auto flex justify-between items-center h-16 px-6">
 
-                <img src="/favicon-final.webp" width={40} alt="Logo principal del header" />
+                <LanguageSwitcher />
 
                 {/* --- BOTÓN HAMBURGUESA  --- */}
                 <button
                     type="button"
-                    aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
+                    aria-label={mobileOpen ? t("common.header-button.close") + " menu" : t("common.header-button.open") + " menu"}
                     aria-expanded={mobileOpen}
                     onClick={() => setMobileOpen((s) => !s)}
                     className={`
@@ -62,12 +64,12 @@ const Header = () => {
                 >
                     {mobileOpen ? (
                         <div className="flex items-center gap-2">
-                            <span className="font-bold text-gray-800 select-none">Cerrar</span>
+                            <span className="font-bold text-gray-800 select-none">{t("common.header-button.close")}</span>
                             <SVGCruz className="w-6 h-6 text-gray-800" />
                         </div>
                     ) : (
                         <div className="flex items-center gap-2">
-                            <span className="font-bold text-gray-800 select-none">Menú</span>
+                            <span className="font-bold text-gray-800 select-none">Menu</span>
                             <SVGHamburguesa className="w-6 h-6 text-gray-800" />
                         </div>
                     )}

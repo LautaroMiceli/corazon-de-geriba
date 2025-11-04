@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { ReviewCarrousel } from '../Components/HomeComponents/ReviewCarrousel'
 import BookingRating from '../Components/HomeComponents/BookingRating'
+import { useTranslation } from 'react-i18next'
 
 const Home = () => (
   <Main />
@@ -10,6 +11,7 @@ export default Home
 
 const Main = () => {
   const [animationsDone] = useState(sessionStorage.getItem("animationsDone"));
+  const { t } = useTranslation()
 
   sessionStorage.setItem("animationsDone", true)
 
@@ -20,15 +22,14 @@ const Main = () => {
       <h1
         className={`${animationsDone ? "" : "animate-fade-in-right"} text-4xl md:text-5xl font-bold mb-4 z-10`}
       >
-        Bienvenidos a Coração de Geriba
+        {t("home.hero-title")}
       </h1>
 
       <span
         className={`${animationsDone ? "" : "animate-fade-in-left"} text-lg md:text-xl mb-3 z-10`}
       >
         <p>
-          Disfruta de una experiencia única en Búzios con atención personalizada y comodidad,
-          avalada por nuestros huéspedes.
+          {t("home.hero-subtitle")}
         </p>
       </span>
  

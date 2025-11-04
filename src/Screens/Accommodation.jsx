@@ -3,34 +3,35 @@ import { bedroomImages_doble, bedroomImages_triple } from "../utils/galleryImage
 import { Link } from "react-router-dom";
 import CustomGallery from "../Components/CustomGallery";
 import { FaLock } from "react-icons/fa";
-import { roomDataDoble, roomDataTriple } from "../utils/roomData";
+import { useTranslation } from "react-i18next";
 
 export default function RoomDetailsScreen() {
+    const {t} = useTranslation()
     return (
         <section className="w-full mx-auto px-4 pt-20 pb-25">
             <header className="text-center">
                 <h1 className="section-title">
-                    Habitaciones
+                    {t("accommodation.sectionTitle")}
                 </h1>
                 <p className="mt-2 text-sm sm:text-base text-gray-600">
-                    Espacios equipados para una estadía cómoda — servicios incluidos.
+                    {t("accommodation.sectionSubtitle")}
                 </p>
             </header>
 
             <div className="mt-8 flex flex-col gap-8">
                 <CustomGallery images={bedroomImages_triple}>
-                    <RoomDetails room={roomDataTriple} />
+                    <RoomDetails roomString="triple" />
                 </CustomGallery>
 
                 <CustomGallery images={bedroomImages_doble} reverse={true}>
-                    <RoomDetails room={roomDataDoble} />
+                    <RoomDetails roomString="doble" />
                 </CustomGallery>
             </div>
 
             <footer className="mt-8">
                 <div className="flex flex-col sm:items-center sm:justify-between gap-4 text-center sm:text-left">
                     <p className="text-sm text-gray-600">
-                        ¿Querés consultar disponibilidad o reservar? Los botones te llevan a la página de consulta.
+                        {t("accommodation.footerText")}
                     </p>
                 </div>
             </footer>
@@ -39,15 +40,17 @@ export default function RoomDetailsScreen() {
 }
 
 
-const RoomDetails = ({ room }) => {
+const RoomDetails = ({ roomString }) => {
+    const {t} = useTranslation()
+    const room = t(`accommodation.rooms.${roomString}`, { returnObjects: true})
     return (
         <article className={`w-full sm:w-88 md:w-150 rounded-3xl p-4 sm:p-6 shadow-sm/30 bg-linear-to-br from-[#F9F6F1] to-white border border-gray-100 text-center lg:text-left`}>
             <h2 className="text-lg sm:text-xl font-semibold mb-2 text-yellow-900">
-                {room.title}
+                {t("accommodation.rooms.triple.title")}
             </h2>
 
             <p className="text-gray-700 mb-3 text-sm sm:text-base">
-                {room.description}
+                {t("accommodation.rooms.triple.description")}
             </p>
 
             <ul className="space-y-2 text-gray-800 text-sm sm:text-base">

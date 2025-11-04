@@ -1,31 +1,37 @@
 import { breakfastImages, bedroomImages } from '../utils/galleryImages';
 import { Link } from 'react-router-dom';
 import CustomGallery from '../Components/CustomGallery';
+import { useTranslation } from 'react-i18next';
+import { Trans } from 'react-i18next';
 
 const Services = () => {
+  const { t } = useTranslation()
   return (
     <section id='services' className="w-full py-20 flex flex-col items-center bg-yellow-50">
       <h2 className="section-title">
-        Nuestros servicios
+        {t("services.sectionTitle")}
       </h2>
 
       <CustomGallery images={breakfastImages} >
         <div className="services-container">
           <div className='flex justify-center items-center gap-2 lg:justify-start'>
-            <h3 className="services-title">Desayuno</h3>
-            <img src='/sin-tacc.webp' alt='Logo sin TACC - apto para celíacos' className='w-10' />
+            <h3 className="services-title">{t("services.breakfast.title")}</h3>
+            <img src='/sin-tacc.webp' alt={t("services.breakfast.altLogo")} className='w-10' />
           </div>
           <p className="services-paragraph">
-            En nuestra posada te espera una experiencia completa con frutas tropicales frescas, panes y tortas caseras, jugos naturales y café brasileño. <b>Somos el único</b> alojamiento de Búzios que ofrece desayunos <b>sin TACC</b> para que puedan comenzar el día con sabor y tranquilidad, en un ambiente relajado y sin contaminación cruzada.
+            <Trans
+              i18nKey="services.breakfast.description"
+              components={{ bold: <strong /> }}
+            />
           </p>
         </div>
       </CustomGallery>
 
       <CustomGallery images={bedroomImages} reverse={true}>
         <div className="services-container">
-          <h3 className="services-title">Habitaciones</h3>
+          <h3 className="services-title">{t("services.bedroom.title")}</h3>
           <p className="services-paragraph">
-            Nuestras habitaciones combinan confort y estilo tropical, con vistas al mar, camas confortables y decoración acogedora. Cada espacio está pensado para que tu estadía sea relajante y memorable.
+            {t("services.bedroom.description")}
           </p>
           <Link
             to={"/accommodations"}
@@ -41,9 +47,9 @@ const Services = () => {
               cursor-pointer
               text-center
             "
-            aria-label="Ver todas las habitaciones disponibles en la posada Corazón de Geribá"
+            aria-label={t("services.bedroom.buttonAriaLabel")}
           >
-            Ver habitaciones
+            {t("services.bedroom.button")}
           </Link>
         </div>
       </CustomGallery>

@@ -1,0 +1,141 @@
+{
+    "common": {
+        "header-nav": [
+            "Início",
+            "Serviços",
+            "Quartos",
+            "Contato",
+            "Reservas"
+        ],
+        "services": "Ver quartos",
+        "accommodation": "Verificar disponibilidade",
+        "booking": [
+            "Entrada",
+            "Saída",
+            "Número de hóspedes",
+            "Verificar disponibilidade"
+        ],
+        "header-button": {
+            "close": "Fechar",
+            "open": "Abrir"
+        },
+        "bookNow": "Reserve agora"
+    },
+    "home": {
+        "hero-title": "Bem-vindo ao Coração de Geriba",
+        "hero-subtitle": "Desfrute de uma experiência única em Búzios com atendimento personalizado e conforto, aprovado por nossos hóspedes.",
+        "reviews": [
+            {
+                "name": "Eduardo",
+                "text": "Os anfitriões são excelentes e forneceram toda atenção e suporte. O café da manhã é muito bom!",
+                "from": "brasil",
+                "score": 9
+            },
+            {
+                "name": "Leli",
+                "text": "Lugar muito bom, ambiente acolhedor e familiar. O café da manhã era muito farto. Os anfitriões sempre atentos.",
+                "from": "argentina",
+                "score": 10
+            },
+            {
+                "name": "Daniel",
+                "text": "Tudo estava perfeito, desde os anfitriões muito atenciosos preocupados com o conforto dos hóspedes, até a limpeza do local. A implementação é muito bonita e o bom ar-condicionado junto com um café da manhã delicioso é muito apreciado.",
+                "from": "chile",
+                "score": 10
+            },
+            {
+                "name": "Patrícia",
+                "text": "Atendimento excelente, muito atentos, café da manhã delicioso, próximo da praia (2 minutos). Quarto espaçoso. Foi ótimo e recomendo.",
+                "from": "brasil",
+                "score": 10
+            },
+            {
+                "name": "Armand",
+                "text": "Gostamos muito! Uma família muito atenciosa e o café da manhã excelente.",
+                "from": "brasil",
+                "score": 9
+            },
+            {
+                "name": "Victor",
+                "text": "Verdadeiramente uma experiência única. Até agora os melhores anfitriões que já tive. Muita disposição da parte deles. O café da manhã também espetacular. Sinceramente 100% recomendável. Voltaria com todo prazer.",
+                "from": "chile",
+                "score": 10
+            },
+            {
+                "name": "Raimundo",
+                "text": "Fui muito bem recebido.",
+                "from": "brasil",
+                "score": 9
+            }
+        ]
+    },
+    "services": {
+        "sectionTitle": "Nossos serviços",
+        "breakfast": {
+            "title": "Café da manhã",
+            "altLogo": "Logo sem glúten - adequado para celíacos",
+            "description": "Em nossa pousada, espera por você uma experiência completa com frutas tropicais frescas, pães e bolos caseiros, sucos naturais e café brasileiro. <b>Somos a única</b> hospedagem em Búzios que oferece <b>café da manhã sem glúten</b> para que você comece o dia com sabor e tranquilidade, em um ambiente relaxado e livre de contaminação cruzada."
+        },
+        "bedroom": {
+            "title": "Quartos",
+            "description": "Nossos quartos combinam conforto e estilo tropical, com vista para o mar, camas confortáveis e decoração acolhedora. Cada espaço é pensado para que sua estadia seja relaxante e memorável.",
+            "button": "Ver quartos",
+            "buttonAriaLabel": "Ver todos os quartos disponíveis na pousada Coração de Geribá"
+        }
+    },
+    "accommodation": {
+        "sectionTitle": "Quartos",
+        "sectionSubtitle": "Espaços equipados para uma estadia confortável — serviços incluídos.",
+        "footerText": "Quer verificar disponibilidade ou fazer uma reserva? Os botões levam você à página de consulta.",
+        "rooms": {
+            "triple": {
+                "title": "Suíte Planta Alta · Tripla",
+                "description": "Ideal para duas pessoas, com possibilidade de incluir uma cama adicional.",
+                "features": [
+                    "Banheiro privativo com amenities e toalhas incluídos.",
+                    "Entretenimento: Smart TV e serviços de streaming.",
+                    "Camas: casal + adicional opcional.",
+                    "Climatização: ar-condicionado.",
+                    "Armazenamento: guarda-roupa e espaço para bagagem."
+                ],
+                "tag": "Acesso privativo · Planta alta",
+                "booking": {
+                    "label": "Verificar disponibilidade",
+                    "link": "/booking?suite=triple"
+                }
+            },
+            "doble": {
+                "title": "Suíte Térrea · Dupla",
+                "description": "Ideal para duas pessoas, com cama de casal e conforto completo.",
+                "features": [
+                    "Banheiro privativo com amenities e roupa de cama.",
+                    "Entretenimento: Smart TV e serviços de streaming.",
+                    "Cama de casal com roupa de cama de alta qualidade.",
+                    "Climatização: ar-condicionado.",
+                    "Guarda-roupa amplo para maior comodidade."
+                ],
+                "tag": "Acesso privativo · Térreo",
+                "booking": {
+                    "label": "Verificar disponibilidade",
+                    "link": "/booking?suite=doble"
+                }
+            }
+        }
+    },
+    "contact": {
+        "sectionTitle": "Contate-nos",
+        "followUsTitle": "Siga-nos",
+        "locationTitle": "Localização",
+        "locationAddress": "Rua das Palmeiras, 123, Geribá, Búzios - RJ, Brasil"
+    },
+    
+        "booking": {
+            "title": "Reserve sua estadia",
+            "checkInLabel": "Check-in",
+            "checkOutLabel": "Check-out",
+            "personsLabel": "Quantidade de pessoas",
+            "buttonLabel": "Consultar disponibilidade",
+            "note": "* Inclui traslados de e para o aeroporto."
+        }
+    
+}

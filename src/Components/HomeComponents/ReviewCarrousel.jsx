@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
-import reviews from "../../utils/reviews";
+import { useTranslation } from "react-i18next";
 
 
 // --- Componente principal decide según breakpoint ---
@@ -20,6 +20,8 @@ export const ReviewCarrousel = ({ animationsDone }) => {
 
 // ---------------- MOBILE ----------------
 export const ReviewCarrouselMobile = ({ animationsDone }) => {
+    const { t } = useTranslation()
+    const reviews = t("home.reviews", { returnObjects: true })
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isTransitioning, setIsTransitioning] = useState(true);
     const intervalRef = useRef(null);
@@ -124,6 +126,8 @@ const ReviewCard = ({ review }) => {
 
 // --- Desktop: grid original ---
 const ReviewMap = () => {
+    const { t } = useTranslation()
+    const reviews = t("home.reviews", { returnObjects: true })
     return (
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-5 group touch-none">
             {reviews.map((review, index) => (
