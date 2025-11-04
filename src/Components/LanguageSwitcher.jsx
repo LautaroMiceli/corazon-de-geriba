@@ -46,6 +46,7 @@ const LanguageSwitcher = () => {
 
             {/* Select real, invisible pero funcional y accesible */}
             <select
+                id="language-switch"
                 aria-label="Cambiar idioma"
                 onChange={handleChange}
                 value={i18n.language}
