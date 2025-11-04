@@ -1,0 +1,131 @@
+{
+    "common": {
+        "header-nav": [
+            "Inicio",
+            "Servicios",
+            "Habitaciones",
+            "Contacto",
+            "Reservas"
+        ],
+        "services": "Ver habitaciones",
+        "accommodation": "Consultar disponibilidad",
+        "booking": [
+            "Entrada",
+            "Salida",
+            "Cantidad de personas",
+            "Consultar disponibilidad"
+        ],
+        "header-button": {
+            "close": "Cerrar",
+            "open": "Abrir"
+        },
+        "bookNow": "Reservá ahora"
+    },
+    "home": {
+        "hero-title": "Bienvenidos a Corazón de Geriba",
+        "hero-subtitle": "Disfruta de una experiencia única en Búzios con atención personalizada y comidad, avalada por nuestros huéspedes.",
+        "reviews": [
+            {
+                "name": "Eduardo",
+                "text": "Los anfitriones son excelentes y brindaron toda la atención y soporte. ¡El desayuno es muy bueno!",
+                "from": "brasil",
+                "score": 9
+            },
+            {
+                "name": "Leli",
+                "text": "Muy buen lugar, ambiente cálido y familiar. El desayuno era muy abundante. Los anfitriones siempre atentos.",
+                "from": "argentina",
+                "score": 10
+            },
+            {
+                "name": "Daniel",
+                "text": "Todo estuvo perfecto, desde los anfitriones muy atentos y preocupados por la comodidad de los huéspedes, hasta la limpieza del lugar. La implementación es muy bonita y el buen aire acondicionado junto con un rico desayuno se agradece muchísimo.",
+                "from": "chile",
+                "score": 10
+            },
+            {
+                "name": "Patrícia",
+                "text": "Atención excelente, muy atentos, desayuno delicioso, cerca de la playa (2 minutos). Habitación espaciosa. Fue genial y lo recomiendo.",
+                "from": "brasil",
+                "score": 10
+            },
+            {
+                "name": "Armand",
+                "text": "¡Nos gustó mucho! Una familia muy atenta y el desayuno excelente.",
+                "from": "brasil",
+                "score": 9
+            },
+            {
+                "name": "Victor",
+                "text": "La verdad, una experiencia única. Hasta el momento los mejores anfitriones que he tenido. Muchísima disposición de su parte. El desayuno también espectacular. Sinceramente 100% recomendable. Volvería con todo gusto.",
+                "from": "chile",
+                "score": 10
+            },
+            {
+                "name": "Raimundo",
+                "text": "Fui muy bien recibido.",
+                "from": "brasil",
+                "score": 9
+            }
+        ]
+    },
+    "services": {
+        "sectionTitle": "Nuestros servicios",
+        "breakfast": {
+            "title": "Desayuno",
+            "altLogo": "Logo sin TACC - apto para celíacos",
+            "description": "En nuestra posada te espera una experiencia completa con frutas tropicales frescas, panes y tortas caseras, jugos naturales y café brasileño. <bold>Somos el único</bold> alojamiento de Búzios que ofrece desayunos <bold>sin TACC</bold> para que puedan comenzar el día con sabor y tranquilidad, en un ambiente relajado y sin contaminación cruzada."
+        },
+        "bedroom": {
+            "title": "Habitaciones",
+            "description": "Nuestras habitaciones combinan confort y estilo tropical, con vistas al mar, camas confortables y decoración acogedora. Cada espacio está pensado para que tu estadía sea relajante y memorable.",
+            "button": "Ver habitaciones",
+            "buttonAriaLabel": "Ver todas las habitaciones disponibles en la posada Corazón de Geribá"
+        }
+    },
+    "accommodation": {
+        "sectionTitle": "Habitaciones",
+        "sectionSubtitle": "Espacios equipados para una estadía cómoda — servicios incluidos.",
+        "footerText": "¿Querés consultar disponibilidad o reservar? Los botones te llevan a la página de consulta.",
+        "rooms": {
+            "triple": {
+                "title": "Habitación Triple",
+                "description": "Espacio amplio para tres personas, con camas confortables y vista al mar.",
+                "features": [
+                    "Wi-Fi gratuito",
+                    "Aire acondicionado",
+                    "Televisión por cable",
+                    "Caja de seguridad"
+                ]
+            },
+            "doble": {
+                "title": "Habitación Doble",
+                "description": "Espacio cómodo para dos personas, con decoración acogedora y servicios incluidos.",
+                "features": [
+                    "Wi-Fi gratuito",
+                    "Aire acondicionado",
+                    "Televisión por cable",
+                    "Caja de seguridad"
+                ]
+            }
+        }
+    },
+    "contact": {
+        "sectionTitle": "Contáctanos",
+        "followUsTitle": "Síguenos",
+        "locationTitle": "Ubicación",
+        "locationAddress": "Rua das Palmeiras, 123, Geribá, Búzios - RJ, Brasil"
+    },
+    "booking": {
+        "title": "Reservá tu estadía",
+        "checkInLabel": "Check in",
+        "checkOutLabel": "Check out",
+        "personsLabel": "Cantidad de personas",
+        "buttonLabel": "Consultar disponibilidad",
+        "note": "* Incluye traslados desde y hacia el aeropuerto.",
+        "persons": {
+            "min": "1",
+            "max": "3"
+        }
+    }
+}

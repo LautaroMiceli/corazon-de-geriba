@@ -1,8 +1,10 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
 const BookNowFloat = () => {
+    const {t} = useTranslation()
     const location = useLocation()
 
     if (location.pathname.startsWith('/booking')) return null
@@ -25,7 +27,7 @@ const BookNowFloat = () => {
     shine
   `}
         >
-            Reserva ahora
+            {t("common.bookNow")}
         </Link>
 
     )

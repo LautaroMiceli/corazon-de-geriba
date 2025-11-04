@@ -4,8 +4,10 @@ import { FloatLabel } from "primereact/floatlabel"
 import { InputNumber } from 'primereact/inputnumber';
 import { useSearchParams } from 'react-router-dom'
 import { buildMessage } from '../utils/buildBookingMessage';
+import { useTranslation } from 'react-i18next';
 
 const Booking = () => {
+    const {t} = useTranslation()
     const [searchParams] = useSearchParams();
     const [bookingConfig, setBookingConfig] = useState({
         ida: null,
@@ -15,13 +17,11 @@ const Booking = () => {
         minVuelta: null,
         suite: searchParams.get("suite")
     })
-    console.log(bookingConfig)
 
     const { ida, vuelta, persons, view, minVuelta } = bookingConfig
 
 
     const handleChangeIda = (e) => {
-        console.log(e.value)
         setBookingConfig(prev => ({ ...prev, ida: e.value }))
         if (e.value) {
             const fecha_string = e.value.toLocaleDateString()
@@ -78,7 +78,7 @@ const Booking = () => {
     return (
         <section id='booking' className='flex flex-col justify-center items-center py-6 px-4 h-full booking_image'>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-6 border-b-4 border-yellow-500 pb-2 text-center">
-                Reservá tu estadía
+                {t("booking.title")}
             </h2>
 
             <div className='flex flex-col flex-wrap items-center justify-center gap-6 sm:gap-10 mt-6 bg-white/95 p-8 sm:p-10 sm:pb-2 rounded-xl w-full max-w-4xl'>
@@ -128,7 +128,7 @@ const Booking = () => {
                         inputClassName="text-center"
                         inputStyle={{ width: "50px" }}
                     />
-                    <label>Cantidad de personas</label>
+                    <label>{t("booking.personsLabel")}</label>
                 </FloatLabel>
 
                 <div className='flex flex-col gap-3'>
@@ -136,10 +136,10 @@ const Booking = () => {
                         onClick={openWhatsApp}
                         className={`text-white py-2 px-4 sm:py-3 sm:px-5 rounded-3xl shadow-sm/30 text-center transition-colors ${vuelta ? "bg-blue-600 hover:bg-blue-700 cursor-pointer" : "bg-blue-300 cursor-not-allowed"} `}
                     >
-                        Consultar disponibilidad
+                        {t("booking.buttonLabel")}
                     </button>
                     <span className='w-full sm:w-auto p-4 sm:p-2 rounded-xl font-light text-center text-sm'>
-                        * Incluye traslados desde y hacia el aeropuerto.
+                        {t("booking.note")}
                     </span>
                 </div>
             </div>
