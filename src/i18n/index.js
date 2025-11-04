@@ -17,7 +17,6 @@ i18n
         fallbackLng: 'en',      // idioma de respaldo
         default: "translation",
         interpolation: { escapeValue: false },
-        debug:true
     });
 
 
