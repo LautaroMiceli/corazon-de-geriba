@@ -96,7 +96,12 @@
                     "Aire acondicionado",
                     "Televisión por cable",
                     "Caja de seguridad"
-                ]
+                ],
+                "tag": "Acceso privado · Planta alta",
+                "booking": {
+                    "label": "Ver disponibilidad",
+                    "link": "/booking?suite=triple"
+                }
             },
             "doble": {
                 "title": "Habitación Doble",
@@ -106,7 +111,12 @@
                     "Aire acondicionado",
                     "Televisión por cable",
                     "Caja de seguridad"
-                ]
+                ],
+                "tag": "Acceso privado · Planta alta",
+                "booking": {
+                    "label": "Ver disponibilidad",
+                    "link": "/booking?suite=triple"
+                }
             }
         }
     },
