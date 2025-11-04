@@ -7,7 +7,7 @@ import { buildMessage } from '../utils/buildBookingMessage';
 import { useTranslation } from 'react-i18next';
 
 const Booking = () => {
-    const {t} = useTranslation()
+    const { t } = useTranslation()
     const [searchParams] = useSearchParams();
     const [bookingConfig, setBookingConfig] = useState({
         ida: null,
@@ -76,7 +76,7 @@ const Booking = () => {
     }
 
     return (
-        <section id='booking' className='flex flex-col justify-center items-center py-6 px-4 h-full booking_image'>
+        <section id='booking' className='flex flex-col justify-center items-center py-6 px-4 h-dvh booking_image'>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-6 border-b-4 border-yellow-500 pb-2 text-center">
                 {t("booking.title")}
             </h2>
@@ -93,6 +93,7 @@ const Booking = () => {
                             showIcon
                             readOnlyInput
                             className='w-full'
+                            touchUI={isMobile()}
                         />
                         <label htmlFor="ida">Check in</label>
                     </FloatLabel>
@@ -108,12 +109,14 @@ const Booking = () => {
                             viewDate={view}
                             disabled={!ida}
                             className='w-full'
+                            touchUI={isMobile()}
                         />
                         <label htmlFor="vuelta">Check out</label>
                     </FloatLabel>
                 </div>
 
-                <FloatLabel className='w-36 sm:w-40'>
+                <div className='flex flex-col text-xs items-center'>
+                    <label className='pb-2 text-gray-500 font-light'>{t("booking.personsLabel")}</label>
                     <InputNumber
                         value={persons}
                         onValueChange={(e) => setBookingConfig({ ...bookingConfig, persons: e.value })}
@@ -128,8 +131,7 @@ const Booking = () => {
                         inputClassName="text-center"
                         inputStyle={{ width: "50px" }}
                     />
-                    <label>{t("booking.personsLabel")}</label>
-                </FloatLabel>
+                </div>
 
                 <div className='flex flex-col gap-3'>
                     <button
