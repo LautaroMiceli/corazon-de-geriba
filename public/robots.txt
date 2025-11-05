@@ -13,6 +13,11 @@ Disallow: /admin/
 Disallow: /api/secrets/
 Disallow: /*.env$
 Disallow: /*.log$
+Disallow: /wordpress/
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-includes/
+Disallow: /*setup-config.php$
 
 # Permitir indexar todo lo demás
 Allow: /
