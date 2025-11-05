@@ -87,7 +87,6 @@ const Header = () => {
                     "md:hidden transition-max-h duration-300 overflow-hidden " +
                     (mobileOpen ? "max-h-screen" : "max-h-0")
                 }
-                aria-hidden={!mobileOpen}
             >
                 <div className="px-6 pb-6">
                     <NavButtonsList
