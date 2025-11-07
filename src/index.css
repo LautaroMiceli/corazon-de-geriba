@@ -300,10 +300,10 @@ select:focus {
 
 @media (pointer: coarse) {
   html, body {
-    cursor: url('/favicon-final.png'), auto !important;
+    cursor: url('/favicon-fnal.png'), auto !important;
   }
 
   *:hover {
-    cursor: url('/favicon-final.png'), auto !important;
+    cursor: url('/favicon-fnal.png'), auto !important;
   }
 }
