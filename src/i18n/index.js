@@ -5,6 +5,8 @@ import en from './en/en.json';
 import es from './es/es.json';
 import pt from './pt/pt.json';
 
+const selectedLanguage = localStorage.getItem('i18nextLng');
+
 i18n
     .use(initReactI18next)
     .init({
@@ -13,7 +15,7 @@ i18n
             es: { translation: es },
             pt: { translation: pt }
         },
-        lng: 'en',              // idioma por defecto
+        lng: selectedLanguage || 'en',              // idioma por defecto
         fallbackLng: 'en',      // idioma de respaldo
         default: "translation",
         interpolation: { escapeValue: false },
