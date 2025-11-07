@@ -257,53 +257,36 @@ body,
 
 
 select {
-  appearance: none;          /* quita el estilo por defecto */
+  appearance: none;          
   background-color: rgba(255,255,255,0.85);
   border-radius: 9999px;
   padding: 0.4rem 1rem;
-  border: 1px solid #cbd5e1; /* azul grisáceo suave */
-  color: #1e3a8a;            /* azul oscuro */
+  border: 1px solid #cbd5e1; 
+  color: #1e3a8a;           
   font-weight: 500;
   cursor: pointer;
   backdrop-filter: blur(4px);
 }
 select:focus {
   outline: none;
-  box-shadow: 0 0 0 2px rgba(59,130,246,0.4); /* halo azul accesible */
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.4); 
 }
 
 ::-webkit-scrollbar {
   width: 10px;
-  /* vertical scrollbar */
   height: 10px;
-  /* horizontal scrollbar */
 }
 
 ::-webkit-scrollbar-track {
   background: #2C2C2C;
-  /* color del track */
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #9F9F9F;
-  /* color del thumb */
   border-radius: 8px;
-  /* bordes redondeados */
   border: 1px solid rgb(98, 94, 94);
-  /* espacio entre track y thumb */
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #555;
-  /* color del thumb al hover */
-}
-
-@media (pointer: coarse) {
-  html, body {
-    cursor: url('/favicon-fnal.png'), auto !important;
-  }
-
-  *:hover {
-    cursor: url('/favicon-fnal.png'), auto !important;
-  }
 }

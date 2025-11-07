@@ -12,7 +12,6 @@ const LanguageSwitcher = () => {
 
   return (
     <div className="relative inline-flex items-center">
-      {/* Contenedor visible, todo clickeable */}
       <button
         type="button"
         aria-label="Cambiar idioma"
@@ -30,7 +29,6 @@ const LanguageSwitcher = () => {
           {i18n.language.toUpperCase()}
         </span>
 
-        {/* Flecha decorativa */}
         <svg
           className="w-3 h-3 text-blue-700 ml-1"
           viewBox="0 0 20 20"
@@ -47,7 +45,6 @@ const LanguageSwitcher = () => {
         </svg>
       </button>
 
-      {/* Select real, invisible pero funcional y accesible */}
       <select
         id="language-switch"
         aria-label="Cambiar idioma"

@@ -43,14 +43,15 @@ export default function RoomDetailsScreen() {
 const RoomDetails = ({ roomString }) => {
     const {t} = useTranslation()
     const room = t(`accommodation.rooms.${roomString}`, { returnObjects: true})
+    console.log(room)
     return (
         <article className={`w-full sm:w-88 md:w-150 rounded-3xl p-4 sm:p-6 shadow-sm/30 bg-linear-to-br from-[#F9F6F1] to-white border border-gray-100 text-center lg:text-left`}>
             <h2 className="text-lg sm:text-xl font-semibold mb-2 text-yellow-900">
-                {t("accommodation.rooms.triple.title")}
+                {room.title}
             </h2>
 
             <p className="text-gray-700 mb-3 text-sm sm:text-base">
-                {t("accommodation.rooms.triple.description")}
+                {room.description}
             </p>
 
             <ul className="space-y-2 text-gray-800 text-sm sm:text-base">

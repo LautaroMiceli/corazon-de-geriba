@@ -90,11 +90,13 @@
         "rooms": {
             "triple": {
                 "title": "Habitación Triple",
-                "description": "Espacio amplio para tres personas, con camas confortables y vista al mar.",
+                "description": "Espacio amplio para tres personas, con camas confortables.",
                 "features": [
-                    "Wi-Fi gratuito",
-                    "Aire acondicionado",
-                    "Televisión por cable"
+                    "Baño privado con artículos de tocador y toallas incluidas.",
+                    "Entretenimiento: Smart TV y servicios de streaming.",
+                    "Camas: doble + opcional adicional.",
+                    "Climatización: aire acondicionado.",
+                    "Almacenamiento: armario y espacio para equipaje."
                 ],
                 "tag": "Acceso privado · Planta alta",
                 "booking": {
@@ -106,11 +108,13 @@
                 "title": "Habitación Doble",
                 "description": "Espacio cómodo para dos personas, con decoración acogedora y servicios incluidos.",
                 "features": [
-                    "Wi-Fi gratuito",
-                    "Aire acondicionado",
-                    "Televisión por cable"
+                    "Baño privado con artículos de tocador y toallas incluidas.",
+                    "Entretenimiento: Smart TV y servicios de streaming.",
+                    "Camas: doble",
+                    "Climatización: aire acondicionado.",
+                    "Almacenamiento: armario y espacio para equipaje."
                 ],
-                "tag": "Acceso privado · Planta alta",
+                "tag": "Acceso privado · Planta baja",
                 "booking": {
                     "label": "Ver disponibilidad",
                     "link": "/booking?suite=triple"
