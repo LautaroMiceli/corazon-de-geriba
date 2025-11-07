@@ -23,4 +23,4 @@ Disallow: /*setup-config.php$
 Allow: /
 
 # Sitemap para facilitar la indexación completa y rápida
-Sitemap: https://www.corazondegeriba.com/sitemap.xml
+Sitemap: https://www.corazongeriba.com/sitemap.xml
