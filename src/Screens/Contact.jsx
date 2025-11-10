@@ -37,7 +37,7 @@ const PhoneEmail = () => {
       component: <FaPhone className='text-yellow-600' />
     },
     {
-      text: "info@coracaodegeriba.com",
+      text: "corazondegeriba@gmail.com",
       component: <FaEnvelope className="text-yellow-600" />
     }
   ]
