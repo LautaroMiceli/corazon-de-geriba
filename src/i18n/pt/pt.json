@@ -19,7 +19,8 @@
             "close": "Fechar",
             "open": "Abrir"
         },
-        "bookNow": "Reserve agora"
+        "bookNow": "Reserve agora",
+        "bookNowDescription": "15% de desconto ao reservar pelo site"
     },
     "home": {
         "hero-title": "Bem-vindo ao Coração de Geriba",

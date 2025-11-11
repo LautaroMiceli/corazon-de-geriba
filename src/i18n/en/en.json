@@ -19,7 +19,8 @@
             "close": "Close",
             "open": "Open"
         },
-        "bookNow": "Book now"
+        "bookNow": "Book now",
+        "bookNowDescription": "15% off booking on the website"
     },
     "home": {
         "hero-title": "Welcome to Corazón de Geriba",
