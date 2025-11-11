@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import SVGCruz from "../Svg/Cruz";
 import SVGHamburguesa from "../Svg/Hamburguesa";
@@ -10,6 +10,7 @@ const Header = () => {
     const navButtons = t("common.header-nav", { returnObjects: true })
     const [hidden, setHidden] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
+    const menuRef = useRef(null);
 
     useEffect(() => {
         let lastScrollY = window.scrollY;
@@ -30,6 +31,18 @@ const Header = () => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    useEffect(() => {
+    const handleClickOutside = (event) => {
+      // Si el menú está abierto y el click fue fuera de su área, se cierra
+      if (open && menuRef.current && !menuRef.current.contains(event.target)) {
+        setMobileOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [open]);
 
     const nav_buttons = [
         { to: "/", text: navButtons[0] },
@@ -63,12 +76,12 @@ const Header = () => {
     bg-gray-100 hover:bg-gray-200 shadow-md cursor-pointer`}
                 >
                     {mobileOpen ? (
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2" ref={menuRef}>
                             <span className="font-bold text-gray-800 select-none">{t("common.header-button.close")}</span>
                             <SVGCruz className="w-6 h-6 text-gray-800" />
                         </div>
                     ) : (
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2" ref={menuRef}>
                             <span className="font-bold text-gray-800 select-none">Menu</span>
                             <SVGHamburguesa className="w-6 h-6 text-gray-800" />
                         </div>
