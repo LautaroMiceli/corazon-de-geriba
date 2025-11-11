@@ -23,7 +23,7 @@
     },
     "home": {
         "hero-title": "Bienvenidos a Corazón de Geriba",
-        "hero-subtitle": "Disfruta de una experiencia única en Búzios con atención personalizada y comidad, avalada por nuestros huéspedes.",
+        "hero-subtitle": "Disfruta de una experiencia única en Búzios con atención personalizada y comodidad, avalada por nuestros huéspedes.",
         "reviews": [
             {
                 "name": "Eduardo",
@@ -90,12 +90,13 @@
         "rooms": {
             "triple": {
                 "title": "Habitación Triple",
-                "description": "Espacio amplio para tres personas, con camas confortables y vista al mar.",
+                "description": "Espacio amplio para tres personas, con camas confortables.",
                 "features": [
-                    "Wi-Fi gratuito",
-                    "Aire acondicionado",
-                    "Televisión por cable",
-                    "Caja de seguridad"
+                    "Baño privado con artículos de tocador y toallas incluidas.",
+                    "Entretenimiento: Smart TV y servicios de streaming.",
+                    "Camas: doble + opcional adicional.",
+                    "Climatización: aire acondicionado.",
+                    "Almacenamiento: armario y espacio para equipaje."
                 ],
                 "tag": "Acceso privado · Planta alta",
                 "booking": {
@@ -107,12 +108,13 @@
                 "title": "Habitación Doble",
                 "description": "Espacio cómodo para dos personas, con decoración acogedora y servicios incluidos.",
                 "features": [
-                    "Wi-Fi gratuito",
-                    "Aire acondicionado",
-                    "Televisión por cable",
-                    "Caja de seguridad"
+                    "Baño privado con artículos de tocador y toallas incluidas.",
+                    "Entretenimiento: Smart TV y servicios de streaming.",
+                    "Camas: doble",
+                    "Climatización: aire acondicionado.",
+                    "Almacenamiento: armario y espacio para equipaje."
                 ],
-                "tag": "Acceso privado · Planta alta",
+                "tag": "Acceso privado · Planta baja",
                 "booking": {
                     "label": "Ver disponibilidad",
                     "link": "/booking?suite=triple"
@@ -124,7 +126,7 @@
         "sectionTitle": "Contáctanos",
         "followUsTitle": "Síguenos",
         "locationTitle": "Ubicación",
-        "locationAddress": "Rua das Palmeiras, 123, Geribá, Búzios - RJ, Brasil"
+        "locationAddress": "Rodrigues de Souza 55, Geribá, Armaçao dos Búzios, RJ."
     },
     "booking": {
         "title": "Reservá tu estadía",

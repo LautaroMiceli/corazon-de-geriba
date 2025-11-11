@@ -42,7 +42,7 @@ const Header = () => {
     // header classes: mantenemos todas tus clases, agregamos control de translate y opacity
     const headerClass =
         (hidden ? "-translate-y-full " : "translate-y-0 ") +
-        "fixed top-0 left-0 w-screen z-50 backdrop-blur-sm bg-white/50 shadow-md reveal_delay_2s transition-transform duration-300";
+        "fixed top-0 left-0 w-screen z-50 bg-white shadow-md reveal_delay_2s transition-transform duration-300";
 
     return (
         <header

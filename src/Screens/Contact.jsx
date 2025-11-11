@@ -2,6 +2,7 @@ import React from 'react';
 import { FaInstagram, FaWhatsapp, FaEnvelope, FaPhone } from 'react-icons/fa';
 import Map from '../Components/Map';
 import { useTranslation } from 'react-i18next';
+import { FaTiktok } from 'react-icons/fa6';
 
 export default function FooterContact() {
   const {t} = useTranslation()
@@ -37,7 +38,7 @@ const PhoneEmail = () => {
       component: <FaPhone className='text-yellow-600' />
     },
     {
-      text: "info@coracaodegeriba.com",
+      text: "corazondegeriba@gmail.com",
       component: <FaEnvelope className="text-yellow-600" />
     }
   ]
@@ -64,6 +65,10 @@ const FollowUs = () => {
       href: "https://wa.me/5522999999999",
       component: <FaWhatsapp />
     },
+    {
+      href: "https://www.tiktok.com/@corao.de.gerib.gue",
+      component: <FaTiktok />
+    }
   ];
   return (
     <div className="flex w-full flex-col gap-2">

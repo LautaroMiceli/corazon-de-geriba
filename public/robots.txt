@@ -13,9 +13,14 @@ Disallow: /admin/
 Disallow: /api/secrets/
 Disallow: /*.env$
 Disallow: /*.log$
+Disallow: /wordpress/
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-includes/
+Disallow: /*setup-config.php$
 
 # Permitir indexar todo lo demás
 Allow: /
 
 # Sitemap para facilitar la indexación completa y rápida
-Sitemap: https://www.corazondegeriba.com/sitemap.xml
+Sitemap: https://www.corazongeriba.com/sitemap.xml
