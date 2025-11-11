@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ReviewCarrousel } from '../Components/HomeComponents/ReviewCarrousel'
 import BookingRating from '../Components/HomeComponents/BookingRating'
 import { useTranslation } from 'react-i18next'
@@ -13,7 +13,11 @@ const Main = () => {
   const [animationsDone] = useState(sessionStorage.getItem("animationsDone"));
   const { t } = useTranslation()
 
-  sessionStorage.setItem("animationsDone", true)
+  useEffect(() => {
+    if (!animationsDone) {
+      sessionStorage.setItem("animationsDone", true);
+    }
+  },[])
 
   return (
     <section
