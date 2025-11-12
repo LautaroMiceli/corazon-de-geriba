@@ -38,7 +38,7 @@ const OfferedServices = () => {
 
     return (
         <div className="w-full mx-auto px-4 pb-12 max-w-6xl">
-            <p className="mb-6 text-sm sm:text-base text-gray-700">Todas nuestras habitaciones cuentan con:</p>
+            <p className="mb-6 text-sm sm:text-base text-gray-700">{t("accommodation.sectionSubtitle")}</p>
 
             <div className="grid grid-cols-2 gap-5 sm:grid-cols-2 lg:grid-cols-4">
                 <ServiceArticleList services={services} />
