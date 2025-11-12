@@ -6,7 +6,7 @@ import Booking from './Components/Booking'
 import Contact from './Screens/Contact'
 import Header from './Components/HeaderLayout'
 import Accommodation from './Screens/Accommodation'
-import Test from './Screens/Test'
+/* import Test from './Screens/Test' */
 
 
 
