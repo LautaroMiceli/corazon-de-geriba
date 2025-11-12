@@ -87,16 +87,32 @@
     "accommodation": {
         "sectionTitle": "Habitaciones",
         "sectionSubtitle": "Espacios equipados para una estadía cómoda — servicios incluidos.",
+        "offeredServices": [
+            {
+                "title": "Wi-Fi",
+                "description": "Disponible en toda la posada"
+            },
+            {
+                "title": "Series y películas",
+                "description": "Disfrutá de las plataformas Netflix y Disney+"
+            },
+            {
+                "title": "Climatización",
+                "description": "Aire acondicionado y ventilador de techo"
+            },
+            {
+                "title": "Amenities",
+                "description": "Ropa de cama, toallas de calidad y productos de baño incluidos."
+            }
+        ],
         "footerText": "¿Querés consultar disponibilidad o reservar? Los botones te llevan a la página de consulta.",
         "rooms": {
             "triple": {
                 "title": "Habitación Triple",
                 "description": "Espacio amplio para tres personas, con camas confortables.",
                 "features": [
-                    "Baño privado con artículos de tocador y toallas incluidas.",
-                    "Entretenimiento: Smart TV y servicios de streaming.",
+                    "Baño privado",
                     "Camas: doble + opcional adicional.",
-                    "Climatización: aire acondicionado.",
                     "Almacenamiento: armario y espacio para equipaje."
                 ],
                 "tag": "Acceso privado · Planta alta",
@@ -109,7 +125,7 @@
                 "title": "Habitación Doble",
                 "description": "Espacio cómodo para dos personas, con decoración acogedora y servicios incluidos.",
                 "features": [
-                    "Baño privado con artículos de tocador y toallas incluidas.",
+                    "Baño privado",
                     "Entretenimiento: Smart TV y servicios de streaming.",
                     "Camas: doble",
                     "Climatización: aire acondicionado.",

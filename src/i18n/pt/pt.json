@@ -87,6 +87,24 @@
     "accommodation": {
         "sectionTitle": "Quartos",
         "sectionSubtitle": "Espaços equipados para uma estadia confortável — serviços incluídos.",
+        "offeredServices": [
+            {
+                "title": "Wi-Fi",
+                "description": "Disponível em todos os nossos quartos."
+            },
+            {
+                "title": "Serviços de streaming",
+                "description": "Filmes e séries disponíveis para aproveitar no quarto."
+            },
+            {
+                "title": "Ventilador e ar-condicionado",
+                "description": "Conforto térmico de acordo com a sua preferência."
+            },
+            {
+                "title": "Roupas de cama e amenities",
+                "description": "Lençóis e toalhas de qualidade, além de produtos de banho incluídos."
+            }
+        ],
         "footerText": "Quer verificar disponibilidade ou fazer uma reserva? Os botões levam você à página de consulta.",
         "rooms": {
             "triple": {
@@ -129,14 +147,12 @@
         "locationTitle": "Localização",
         "locationAddress": "Rodrigues de Souza 55, Geribá, Armaçao dos Búzios, RJ."
     },
-    
-        "booking": {
-            "title": "Reserve sua estadia",
-            "checkInLabel": "Check-in",
-            "checkOutLabel": "Check-out",
-            "personsLabel": "Quantidade de pessoas",
-            "buttonLabel": "Consultar disponibilidade",
-            "note": "* Inclui traslados de e para o aeroporto."
-        }
-    
+    "booking": {
+        "title": "Reserve sua estadia",
+        "checkInLabel": "Check-in",
+        "checkOutLabel": "Check-out",
+        "personsLabel": "Quantidade de pessoas",
+        "buttonLabel": "Consultar disponibilidade",
+        "note": "* Inclui traslados de e para o aeroporto."
+    }
 }

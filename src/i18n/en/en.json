@@ -87,6 +87,24 @@
     "accommodation": {
         "sectionTitle": "Bedrooms",
         "sectionSubtitle": "Spaces equipped for a comfortable stay — services included.",
+        "offeredServices": [
+            {
+                "title": "Wi-Fi",
+                "description": "Available in all our rooms."
+            },
+            {
+                "title": "Streaming services",
+                "description": "Movies and series available to enjoy from your room."
+            },
+            {
+                "title": "Fan and air conditioning",
+                "description": "Thermal comfort adjusted to your preference."
+            },
+            {
+                "title": "Bedding and amenities",
+                "description": "High-quality sheets and towels, plus bathroom essentials included."
+            }
+        ],
         "footerText": "Would you like to check availability or make a reservation? The buttons take you to the inquiry page.",
         "rooms": {
             "triple": {
