@@ -60,8 +60,9 @@ const Header = () => {
     return (
         <header
             className={headerClass}
+            ref={menuRef}
         >
-            <div className="max-w-7xl mx-auto flex justify-between items-center h-16 px-6">
+            <div className="max-w-7xl mx-auto flex justify-between items-center h-16 px-6" >
 
                 <LanguageSwitcher />
 
@@ -76,12 +77,12 @@ const Header = () => {
     bg-gray-100 hover:bg-gray-200 shadow-md cursor-pointer`}
                 >
                     {mobileOpen ? (
-                        <div className="flex items-center gap-2" ref={menuRef}>
+                        <div className="flex items-center gap-2" >
                             <span className="font-bold text-gray-800 select-none">{t("common.header-button.close")}</span>
                             <SVGCruz className="w-6 h-6 text-gray-800" />
                         </div>
                     ) : (
-                        <div className="flex items-center gap-2" ref={menuRef}>
+                        <div className="flex items-center gap-2" >
                             <span className="font-bold text-gray-800 select-none">Menu</span>
                             <SVGHamburguesa className="w-6 h-6 text-gray-800" />
                         </div>
