@@ -22,7 +22,7 @@ function App() {
           <Route path='/services' element={<Services />} />
           <Route path='/accommodations' element={<Accommodation />} />
           <Route path="*" element={<Navigate to="/" replace />} />
-          <Route path='/test' element={<Test />} />
+          {/* <Route path='/test' element={<Test />} /> */}
         </Routes>
         <BookNowFloat />
       </main>
